@@ -8,6 +8,8 @@ from torch.utils.data import DataLoader, TensorDataset
 import numpy as np
 
 # Определение архитектуры модели
+
+
 class MedicalNet(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(MedicalNet, self).__init__()
@@ -23,11 +25,23 @@ class MedicalNet(nn.Module):
         return x
 
 # Функция для обучения модели
-def train_model(data, labels, input_size, hidden_size, output_size, epochs=20, batch_size=32):
+
+
+def train_model(
+        data,
+        labels,
+        input_size,
+        hidden_size,
+        output_size,
+        epochs=20,
+        batch_size=32):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Создание датасета и загрузчика данных
-    dataset = TensorDataset(torch.tensor(data, dtype=torch.float32), torch.tensor(labels, dtype=torch.long))
+    dataset = TensorDataset(
+        torch.tensor(
+            data, dtype=torch.float32), torch.tensor(
+            labels, dtype=torch.long))
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
     # Инициализация модели
@@ -56,7 +70,14 @@ def train_model(data, labels, input_size, hidden_size, output_size, epochs=20, b
     print("Модель сохранена как 'medical_net.pth'")
 
 # Функция для прогнозирования
-def predict(data, input_size, hidden_size, output_size, model_path="medical_net.pth"):
+
+
+def predict(
+        data,
+        input_size,
+        hidden_size,
+        output_size,
+        model_path="medical_net.pth"):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Загрузка модели
@@ -73,6 +94,8 @@ def predict(data, input_size, hidden_size, output_size, model_path="medical_net.
     return predictions.cpu().numpy()
 
 # Основной код
+
+
 def main():
     # Пример данных
     data = np.random.rand(100, 10)  # 100 образцов, 10 признаков
@@ -89,6 +112,7 @@ def main():
     test_data = np.random.rand(5, 10)  # 5 новых образцов
     predictions = predict(test_data, input_size, hidden_size, output_size)
     print("Predictions:", predictions)
+
 
 if __name__ == "__main__":
     main()

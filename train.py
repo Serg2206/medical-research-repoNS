@@ -29,9 +29,13 @@ class MedicalDataset(Dataset):
     def __getitem__(self, idx):
         item = self.data.iloc[idx]
         tokens = self.tokenizer(
-            item["text"], truncation=True, padding="max_length", max_length=self.max_length, return_tensors="pt"
-        )
-        return tokens["input_ids"].squeeze(), tokens["attention_mask"].squeeze(), torch.tensor(item["label"])
+            item["text"],
+            truncation=True,
+            padding="max_length",
+            max_length=self.max_length,
+            return_tensors="pt")
+        return tokens["input_ids"].squeeze(
+        ), tokens["attention_mask"].squeeze(), torch.tensor(item["label"])
 
 
 def prepare_data(input_csv, output_dir, test_size=0.2):
@@ -52,8 +56,10 @@ def prepare_data(input_csv, output_dir, test_size=0.2):
     data["text"] = data["text"].str.strip()
 
     # Разделение данных
-    train_data, test_data = train_test_split(data, test_size=test_size, random_state=42)
-    logger.info(f"Разделение данных: {len(train_data)} для обучения, {len(test_data)} для теста")
+    train_data, test_data = train_test_split(
+        data, test_size=test_size, random_state=42)
+    logger.info(
+        f"Разделение данных: {len(train_data)} для обучения, {len(test_data)} для теста")
 
     # Сохранение данных
     os.makedirs(output_dir, exist_ok=True)
@@ -62,10 +68,16 @@ def prepare_data(input_csv, output_dir, test_size=0.2):
     logger.info(f"Обработанные данные сохранены в {output_dir}")
 
 
-def train_model(data_dir, output_dir, epochs=3, batch_size=16, learning_rate=2e-5):
+def train_model(
+        data_dir,
+        output_dir,
+        epochs=3,
+        batch_size=16,
+        learning_rate=2e-5):
     logger.info("Инициализация модели...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=2)
+    model = AutoModelForSequenceClassification.from_pretrained(
+        MODEL_NAME, num_labels=2)
     model.to(DEVICE)
 
     # Загрузка данных
@@ -80,7 +92,10 @@ def train_model(data_dir, output_dir, epochs=3, batch_size=16, learning_rate=2e-
         logger.info(f"Эпоха {epoch + 1}/{epochs}")
         for batch in dataloader:
             input_ids, attention_mask, labels = [x.to(DEVICE) for x in batch]
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
+            outputs = model(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                labels=labels)
             loss = outputs.loss
             loss.backward()
             optimizer.step()
@@ -94,9 +109,16 @@ def train_model(data_dir, output_dir, epochs=3, batch_size=16, learning_rate=2e-
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Обучение нейросети на медицинских данных")
-    parser.add_argument("--data", required=True, help="Путь к исходным данным CSV")
-    parser.add_argument("--output", required=True, help="Директория для сохранения модели и данных")
+    parser = argparse.ArgumentParser(
+        description="Обучение нейросети на медицинских данных")
+    parser.add_argument(
+        "--data",
+        required=True,
+        help="Путь к исходным данным CSV")
+    parser.add_argument(
+        "--output",
+        required=True,
+        help="Директория для сохранения модели и данных")
     args = parser.parse_args()
 
     # Подготовка данных
