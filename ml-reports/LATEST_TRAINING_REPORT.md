@@ -1,32 +1,32 @@
 # 📊 ML Training Report
 
-**Дата:** 2025-11-06 20:31:36
+**Дата:** 2025-11-06 21:46:21
 
 ## 📈 Результаты
 
 ### Датасет
-- **Всего:** 200
-    - **Train:** 160
-    - **Test:** 40
+- **Всего:** 243
+    - **Train:** 194
+    - **Test:** 49
 ### Распределение
 ```
 label
-moderate    90
-normal      73
-critical    37
+moderate    101
+normal       73
+critical     69
 ```
 
-### 🏆 Лучшая модель: LogisticRegression
+### 🏆 Лучшая модель: RandomForest
 
 | Модель | Accuracy | CV Mean | CV Std |
 |--------|----------|---------|--------|
-|    RandomForest | 0.5750 | 0.7375 | 0.0643 |
-|    GradientBoosting | 0.6250 | 0.6937 | 0.0914 |
-| 🏆 LogisticRegression | 0.6750 | 0.6687 | 0.0545 |
+| 🏆 RandomForest | 0.7755 | 0.7162 | 0.0869 |
+|    GradientBoosting | 0.7551 | 0.6748 | 0.0709 |
+|    LogisticRegression | 0.7755 | 0.7057 | 0.0859 |
 
 
 ### Category Classifier
-- **Accuracy:** 0.2250
+- **Accuracy:** 0.3265
 
 ## 💾 Сохраненные модели
 1. `ml-models/severity_classifier.pkl`
