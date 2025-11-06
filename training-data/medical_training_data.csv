@@ -50,3 +50,34 @@ text,label,category,confidence,research_area,complexity
 Пациент с остеопорозом начата терапия,moderate,endocrinology,0.82,bone_health,medium
 Рутинная электрокардиограмма без отклонений,normal,cardiology,0.93,cardiac_screening,low
 Острый инсульт ишемический в бассейне средней мозговой артерии,critical,neurology,0.98,stroke_research,high
+
+Обнаружена аневризма брюшной аорты диаметром 6.5 см требует экстренной хирургии,critical,vascular_surgery,0.97,emergency_care,high
+Пациент с фибрилляцией предсердий получает антикоагулянтную терапию,moderate,cardiology,0.85,arrhythmia_management,medium
+Выявлен колоректальный рак 3 стадии с метастазами в печени,critical,oncology,0.94,cancer_research,high
+Профилактический прием статинов для снижения холестерина,normal,cardiology,0.92,preventive_care,low
+Пациент отмечает периодические боли в эпигастрии после еды,moderate,gastroenterology,0.78,digestive_disorders,medium
+Диагностирован остеопороз с высоким риском переломов,moderate,rheumatology,0.82,bone_health,medium
+Выполнена успешная операция по замене тазобедренного сустава,normal,orthopedics,0.95,joint_replacement,low
+Пациент с хронической мигренью проходит профилактическое лечение,moderate,neurology,0.81,pain_management,medium
+Обнаружена острая почечная недостаточность требует диализа,critical,nephrology,0.96,kidney_disease,high
+Профилактическая маммография показала норму без патологий,normal,oncology,0.99,cancer_screening,low
+Пациент с псориазом получает биологическую терапию,moderate,dermatology,0.84,autoimmune_disease,medium
+Диагностирован диабет 1 типа требует инсулинотерапии,critical,endocrinology,0.93,diabetes_research,high
+Выявлена катаракта обоих глаз планируется операция,moderate,ophthalmology,0.88,vision_care,medium
+Пациент с язвенным колитом в стадии ремиссии,normal,gastroenterology,0.86,inflammatory_disease,low
+Обнаружена меланома кожи на ранней стадии удалена успешно,moderate,oncology,0.91,cancer_research,medium
+Пациент восстанавливается после перенесенного инсульта,moderate,neurology,0.83,stroke_recovery,medium
+Диагностирована тяжелая форма астмы требует стационарного лечения,critical,pulmonology,0.95,asthma_research,high
+Профилактический осмотр у уролога не выявил патологий,normal,urology,0.98,preventive_care,low
+Пациент с фиброзом печени на фоне хронического гепатита C,moderate,gastroenterology,0.82,liver_disease,medium
+Обнаружен абсцесс легкого требует антибиотикотерапии и дренирования,critical,pulmonology,0.94,infectious_disease,high
+Обнаружен абсцесс легкого требует антибиотикотерапии и дренирования,critical,pulmonology,0.94,infectious_disease,high
+Диагностирована желчнокаменная болезнь с холециститом,moderate,gastroenterology,0.85,digestive_disorders,medium
+Пациент с варикозным расширением вен нижних конечностей,moderate,vascular_surgery,0.79,cardiovascular_health,medium
+Обнаружен тромб в глубоких венах требует антикоагулянтов,critical,vascular_surgery,0.92,thrombosis_research,high
+Профилактика вакцинацией от гриппа и пневмококка,normal,immunology,0.97,preventive_care,low
+Диагностирован синдром раздраженного кишечника,moderate,gastroenterology,0.76,digestive_disorders,medium
+Пациент с гипертиреозом получает тиреостатики,moderate,endocrinology,0.83,thyroid_disease,medium
+Обнаружена анемия тяжелой степени требует переливания крови,critical,hematology,0.91,blood_disorders,high
+Профилактическое уЗИ щитовидной железы без особенностей,normal,endocrinology,0.95,preventive_care,low
+Пациент с болезнью Крона в фазе обострения,moderate,gastroenterology,0.82,inflammatory_disease,medium
