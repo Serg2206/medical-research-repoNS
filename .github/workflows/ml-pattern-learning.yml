@@ -1,0 +1,180 @@
+name: ML Pattern Learning
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'  # Еженедельно по воскресеньям в 4:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ml-learning:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install ML dependencies
+        run: |
+          pip install openai numpy pandas scikit-learn matplotlib seaborn joblib
+          
+      - name: ML Pattern Analysis
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python << 'EOF'
+          import os
+          import json
+          import openai
+          from pathlib import Path
+          from datetime import datetime, timedelta
+          import subprocess
+          
+          openai.api_key = os.environ.get('OPENAI_API_KEY')
+          
+          def analyze_patterns_with_ml():
+              """Анализ паттернов с использованием ML"""
+              
+              # Получаем историю коммитов
+              result = subprocess.run(
+                  ['git', 'log', '--pretty=format:%H|%an|%ae|%ad|%s', '--date=iso', '-100'],
+                  capture_output=True, text=True
+              )
+              
+              commits = []
+              for line in result.stdout.strip().split('\n'):
+                  if line:
+                      parts = line.split('|')
+                      if len(parts) == 5:
+                          commits.append({
+                              'hash': parts[0],
+                              'author': parts[1],
+                              'email': parts[2],
+                              'date': parts[3],
+                              'message': parts[4]
+                          })
+              
+              print(f"🔍 Анализ {len(commits)} коммитов...")
+              
+              # Анализ с помощью GPT-4
+              if openai.api_key and openai.api_key != 'None':
+                  analysis_prompt = f"""
+                  Проанализируй паттерны разработки на основе истории коммитов.
+                  Найди:
+                  1. Частые типы изменений
+                  2. Временные паттерны активности
+                  3. Области, требующие улучшения
+                  4. Рекомендации по оптимизации процесса
+                  
+                  История коммитов:
+                  {json.dumps(commits[:20], indent=2, ensure_ascii=False)}
+                  """
+                  
+                  try:
+                      response = openai.chat.completions.create(
+                          model="gpt-4",
+                          messages=[
+                              {"role": "system", "content": "Ты ML-эксперт по анализу паттернов разработки. Анализируй данные и выявляй закономерности."},
+                              {"role": "user", "content": analysis_prompt}
+                          ],
+                          temperature=0.5,
+                          max_tokens=2000
+                      )
+                      
+                      ml_insights = response.choices[0].message.content
+                  except Exception as e:
+                      ml_insights = f"⚠️ Ошибка ML анализа: {str(e)}"
+              else:
+                  ml_insights = "⚠️ OPENAI_API_KEY не настроен"
+              
+              return {
+                  'commit_count': len(commits),
+                  'ml_insights': ml_insights,
+                  'timestamp': datetime.now().isoformat()
+              }
+          
+          def analyze_code_frequency():
+              """Анализ частоты изменений файлов"""
+              result = subprocess.run(
+                  ['git', 'log', '--pretty=format:', '--name-only', '-100'],
+                  capture_output=True, text=True
+              )
+              
+              files = [f for f in result.stdout.split('\n') if f]
+              file_freq = {}
+              for f in files:
+                  file_freq[f] = file_freq.get(f, 0) + 1
+              
+              # Топ-10 самых изменяемых файлов
+              top_files = sorted(file_freq.items(), key=lambda x: x[1], reverse=True)[:10]
+              
+              return top_files
+          
+          # Создаем директорию для ML отчетов
+          ml_dir = Path('ml-insights')
+          ml_dir.mkdir(exist_ok=True)
+          
+          print("\n🤖 Запуск ML анализа паттернов...")
+          
+          # Анализ паттернов
+          patterns = analyze_patterns_with_ml()
+          
+          # Анализ частоты изменений
+          top_files = analyze_code_frequency()
+          
+          # Сохраняем результаты
+          report = {
+              'timestamp': datetime.now().isoformat(),
+              'patterns': patterns,
+              'top_changed_files': top_files
+          }
+          
+          report_file = ml_dir / f'ml-analysis-{datetime.now().strftime("%Y%m%d-%H%M%S")}.json'
+          with open(report_file, 'w', encoding='utf-8') as f:
+              json.dump(report, f, indent=2, ensure_ascii=False)
+          
+          print(f"\n📊 ML отчет сохранен: {report_file}")
+          
+          # Создаем markdown отчет
+          md_file = ml_dir / 'LATEST_ML_INSIGHTS.md'
+          with open(md_file, 'w', encoding='utf-8') as f:
+              f.write("# 🧠 ML Pattern Learning Report\n\n")
+              f.write(f"**Дата:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+              f.write(f"**Проанализировано коммитов:** {patterns['commit_count']}\n\n")
+              
+              f.write("## 🎯 ML Insights\n\n")
+              f.write(f"{patterns['ml_insights']}\n\n")
+              
+              f.write("## 📈 Топ-10 самых изменяемых файлов\n\n")
+              for file, count in top_files:
+                  f.write(f"- `{file}`: {count} изменений\n")
+              
+              f.write("\n---\n")
+              f.write("*Автоматически сгенерировано ML Pattern Learning System*\n")
+          
+          print(f"✅ Markdown отчет создан: {md_file}")
+          print("\n🎉 ML анализ паттернов завершен!")
+          EOF
+          
+      - name: Commit ML insights
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "ML Pattern Learner"
+          git add ml-insights/
+          git diff --staged --quiet || git commit -m "🧠 ML Pattern Learning Report [automated]"
+          git push || echo "No changes to push"
+          
+      - name: Create summary
+        run: |
+          echo "## 🧠 ML Pattern Learning Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Pattern analysis completed" >> $GITHUB_STEP_SUMMARY
+          echo "📊 Insights saved to ml-insights/ directory" >> $GITHUB_STEP_SUMMARY
