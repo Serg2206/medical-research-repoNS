@@ -137,9 +137,8 @@ def generate_report(df, results, best_model_name, best_accuracy,
 
 ### Датасет
 - **Всего:** {len(df)}
-- **Train:** {len(X_train)}
-- **Test:** {len(X_test)}
-
+    - **Train:** {X_train.shape[0]}
+    - **Test:** {X_test.shape[0]}
 ### Распределение
 ```
 {df['label'].value_counts().to_string()}
