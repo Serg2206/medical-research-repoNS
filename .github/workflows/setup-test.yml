@@ -1,0 +1,107 @@
+name: 🧠 System Setup Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/setup-test.yml'
+
+jobs:
+  setup-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: 📦 Install dependencies
+        run: |
+          pip install --upgrade pip
+          echo "✅ Python and pip ready"
+      
+      - name: 🔍 Check repository structure
+        run: |
+          echo "📁 Repository structure:"
+          ls -la
+          echo ""
+          echo "📂 Workflows:"
+          ls -la .github/workflows/ || echo "No workflows yet"
+      
+      - name: 📊 System info
+        run: |
+          echo "=" | tr '\n' '=' | head -c 60; echo
+          echo "SYSTEM INFORMATION"
+          echo "=" | tr '\n' '=' | head -c 60; echo
+          echo "Python: $(python --version)"
+          echo "Pip: $(pip --version)"
+          echo "OS: $(uname -a)"
+          echo "Disk: $(df -h / | tail -1)"
+          echo "Memory: $(free -h | grep Mem)"
+      
+      - name: 🎯 Create summary
+        run: |
+          cat > SETUP_REPORT.md << 'EOF'
+          # 🚀 Self-Learning System - Setup Report
+          
+          **Date:** $(date)
+          **Status:** ✅ READY
+          
+          ## Checklist
+          
+          - ✅ GitHub Actions: Working
+          - ✅ Python 3.11: Installed
+          - ✅ Repository: Accessible
+          - ⏳ OpenAI API Key: **Waiting for you to add**
+          
+          ## Next Steps
+          
+          ### 1. Add OpenAI API Key
+          Go to: Settings → Secrets → Actions
+          - Click "New repository secret"
+          - Name: `OPENAI_API_KEY`
+          - Value: Your OpenAI key (sk-proj-...)
+          
+          ### 2. Files to create
+          After adding the key, I'll help you create:
+          - 🤖 AI Code Optimizer
+          - 📊 ML Pattern Learning
+          - ♻️ Auto Refactoring
+          - ⚡ Performance Monitor
+          - 📚 Research Analyzer
+          - 📝 Docs Improver
+          
+          ### 3. Ready to go!
+          Once the key is added, the full AI system will activate automatically.
+          
+          ---
+          
+          **Current Status:** 🟡 Waiting for OpenAI API Key
+          **Time to complete:** 2 minutes
+          EOF
+          
+          cat SETUP_REPORT.md
+      
+      - name: 🎉 Success message
+        run: |
+          echo ""
+          echo "╔═══════════════════════════════════════════════════════════╗"
+          echo "║                                                           ║"
+          echo "║  ✅ SETUP TEST SUCCESSFUL!                               ║"
+          echo "║                                                           ║"
+          echo "║  Your GitHub Actions environment is ready.               ║"
+          echo "║                                                           ║"
+          echo "║  📋 TODO: Add OPENAI_API_KEY to Secrets                 ║"
+          echo "║                                                           ║"
+          echo "║  Then you'll have:                                       ║"
+          echo "║  🤖 AI-powered code analysis                            ║"
+          echo "║  📊 ML learning from your patterns                      ║"
+          echo "║  ♻️  Automatic refactoring                              ║"
+          echo "║  ⚡ Performance optimization                            ║"
+          echo "║                                                           ║"
+          echo "╚═══════════════════════════════════════════════════════════╝"
+          echo ""
