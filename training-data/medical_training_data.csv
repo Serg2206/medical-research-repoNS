@@ -1,0 +1,52 @@
+text,label,category,confidence,research_area,complexity
+Пациент поступил с острой болью в грудной клетке и одышкой,critical,cardiology,0.95,emergency_care,high
+Рутинный осмотр показал нормальные показатели артериального давления,normal,general_practice,0.88,preventive_care,low
+Обнаружены множественные метастазы в печени при КТ сканировании,critical,oncology,0.92,cancer_research,high
+Пациент жалуется на периодические головные боли умеренной интенсивности,moderate,neurology,0.75,pain_management,medium
+Анализ крови показал повышенный уровень глюкозы 8.5 ммоль/л,moderate,endocrinology,0.85,diabetes_research,medium
+Послеоперационный период протекает без осложнений,normal,surgery,0.90,postoperative_care,low
+Выявлена тяжелая пневмония с двусторонним поражением легких,critical,pulmonology,0.93,infectious_disease,high
+Профилактическая вакцинация выполнена согласно графику,normal,immunology,0.99,preventive_care,low
+Диагностирован острый инфаркт миокарда с подъемом сегмента ST,critical,cardiology,0.97,emergency_care,high
+Пациент отмечает улучшение состояния после начала терапии,normal,general_practice,0.82,treatment_efficacy,low
+Обнаружен перелом шейки бедра у пациента 75 лет,critical,orthopedics,0.91,trauma_care,high
+Уровень холестерина в пределах нормы 4.8 ммоль/л,normal,cardiology,0.87,cardiovascular_health,low
+Подозрение на аппендицит требует срочного хирургического вмешательства,critical,surgery,0.89,emergency_surgery,high
+Аллергическая реакция на антибиотики средней степени тяжести,moderate,allergology,0.86,drug_safety,medium
+Результаты биопсии показали доброкачественное образование,normal,pathology,0.94,cancer_screening,low
+Тяжелая черепно-мозговая травма с потерей сознания,critical,neurosurgery,0.96,trauma_care,high
+Пациент с хроническим бронхитом в стадии ремиссии,normal,pulmonology,0.83,chronic_disease,low
+Острая почечная недостаточность требует диализа,critical,nephrology,0.94,kidney_disease,high
+Рутинная флюорография без патологических изменений,normal,radiology,0.91,screening,low
+Диагностирован сахарный диабет 2 типа впервые выявленный,moderate,endocrinology,0.88,diabetes_research,medium
+Тяжелая анемия с гемоглобином 65 г/л,critical,hematology,0.90,blood_disorders,high
+Пациент с артериальной гипертензией 1 степени,moderate,cardiology,0.84,hypertension_management,medium
+Выявлена острая кишечная непроходимость,critical,surgery,0.95,emergency_surgery,high
+Профилактический осмотр у стоматолога без замечаний,normal,dentistry,0.92,preventive_care,low
+Подозрение на туберкулез легких требует дополнительного обследования,moderate,infectious_disease,0.87,tuberculosis_research,medium
+Острый панкреатит с выраженным болевым синдромом,critical,gastroenterology,0.93,digestive_disorders,high
+Уровень гормонов щитовидной железы в норме,normal,endocrinology,0.89,hormonal_health,low
+Множественные переломы при политравме,critical,trauma,0.98,emergency_care,high
+Пациент с хронической сердечной недостаточностью стабильное состояние,moderate,cardiology,0.85,heart_failure,medium
+Рутинный анализ мочи без патологии,normal,urology,0.90,screening,low
+Острый аллергический отек Квинке,critical,allergology,0.94,emergency_allergy,high
+Пациент с депрессией средней степени тяжести,moderate,psychiatry,0.81,mental_health,medium
+Послеродовой период без осложнений,normal,obstetrics,0.93,maternal_health,low
+Острый тромбоз глубоких вен нижних конечностей,critical,vascular_surgery,0.92,thrombosis_research,high
+Профилактический прием витаминов,normal,general_practice,0.88,nutrition,low
+Обострение бронхиальной астмы тяжелой степени,critical,pulmonology,0.91,asthma_research,high
+Заживление послеоперационной раны первичным натяжением,normal,surgery,0.94,wound_healing,low
+Диагностирован острый гломерулонефрит,moderate,nephrology,0.86,kidney_disease,medium
+Пациент поступил с анафилактическим шоком,critical,emergency_medicine,0.99,anaphylaxis,high
+Плановая замена тазобедренного сустава прошла успешно,normal,orthopedics,0.92,joint_replacement,low
+Острый живот неясной этиологии,critical,surgery,0.88,emergency_diagnosis,high
+Пациент с артрозом коленных суставов 2 степени,moderate,rheumatology,0.83,joint_disease,medium
+Результаты маммографии без признаков злокачественных образований,normal,oncology,0.95,cancer_screening,low
+Острая респираторная вирусная инфекция с высокой температурой,moderate,infectious_disease,0.80,viral_infection,medium
+Тяжелое обострение язвенной болезни желудка с кровотечением,critical,gastroenterology,0.96,bleeding_disorders,high
+Профилактический осмотр офтальмолога без патологии,normal,ophthalmology,0.91,vision_care,low
+Диагностирован острый цистит,moderate,urology,0.84,urinary_infection,medium
+Развитие сепсиса на фоне пневмонии,critical,intensive_care,0.97,sepsis_research,high
+Пациент с остеопорозом начата терапия,moderate,endocrinology,0.82,bone_health,medium
+Рутинная электрокардиограмма без отклонений,normal,cardiology,0.93,cardiac_screening,low
+Острый инсульт ишемический в бассейне средней мозговой артерии,critical,neurology,0.98,stroke_research,high
