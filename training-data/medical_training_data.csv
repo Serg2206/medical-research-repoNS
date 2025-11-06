@@ -81,3 +81,123 @@ text,label,category,confidence,research_area,complexity
 Обнаружена анемия тяжелой степени требует переливания крови,critical,hematology,0.91,blood_disorders,high
 Профилактическое уЗИ щитовидной железы без особенностей,normal,endocrinology,0.95,preventive_care,low
 Пациент с болезнью Крона в фазе обострения,moderate,gastroenterology,0.82,inflammatory_disease,medium
+
+Пациент с нарушением сердечного ритма требует холтеровского мониторинга,moderate,cardiology,0.86,arrhythmia_monitoring,medium
+Обнаружена опухоль поджелудочной железы стадия 2 требует химиотерапии,critical,oncology,0.89,cancer_research,high
+Профилактический осмотр выявил начальную стадию глаукомы правого глаза,normal,ophthalmology,0.94,preventive_care,low
+Пациент жалуется на боли в коленных суставах при ходьбе и физических нагрузках,moderate,orthopedics,0.77,joint_pain,medium
+Диагностирован ревматоидный артрит требует назначения базисной терапии,critical,rheumatology,0.91,autoimmune_disease,high
+Анализ мочи показал протеинурию требует дополнительного обследования почек,moderate,nephrology,0.84,kidney_disease,medium
+Пациент с гипотиреозом получает заместительную гормональную терапию левотироксином,moderate,endocrinology,0.88,thyroid_disease,medium
+Выявлена дисплазия шейки матки 2 степени требует кольпоскопии и биопсии,moderate,gynecology,0.86,cancer_screening,medium
+Пациент отмечает учащенное сердцебиение и головокружение после физической нагрузки,moderate,cardiology,0.79,cardiovascular_health,medium
+Профилактическая маммография не выявила патологических изменений молочных желез,normal,gynecology,0.97,preventive_care,low
+Диагностирован остеопороз поясничного отдела позвоночника требует лечения,moderate,rheumatology,0.82,bone_health,medium
+Пациент с хроническим бронхитом курильщика требует отказа от курения,moderate,pulmonology,0.76,chronic_disease,medium
+Обнаружен камень в правой почке размером 8 мм рекомендовано консервативное лечение,moderate,urology,0.84,kidney_stones,medium
+Пациент с аллергическим ринитом получает антигистаминные препараты сезонно,normal,allergology,0.89,allergy_management,low
+Диагностирована железодефицитная анемия средней степени тяжести требует лечения,moderate,hematology,0.85,blood_disorders,medium
+Профилактический осмотр у гинеколога не выявил патологии репродуктивной системы,normal,gynecology,0.96,preventive_care,low
+Пациент жалуется на изжогу и отрыжку после приема пищи диагностирован рефлюкс,moderate,gastroenterology,0.81,digestive_disorders,medium
+Обнаружена катаракта левого глаза начальная стадия рекомендовано наблюдение,normal,ophthalmology,0.91,vision_care,low
+Пациент с гипертонической болезнью 2 стадии получает комбинированную терапию,moderate,cardiology,0.87,hypertension_management,medium
+Диагностирован синдром раздраженного кишечника с преобладанием диареи,moderate,gastroenterology,0.78,digestive_disorders,medium
+Профилактическая флюорография органов грудной клетки без патологических изменений,normal,pulmonology,0.98,preventive_care,low
+Пациент с варикозным расширением вен нижних конечностей 2 степени требует лечения,moderate,vascular_surgery,0.83,cardiovascular_health,medium
+Обнаружена грыжа межпозвоночного диска L4-L5 требует консервативной терапии,moderate,neurology,0.86,spine_disorders,medium
+Пациент отмечает снижение слуха на правое ухо требует аудиометрии и консультации,moderate,otolaryngology,0.82,hearing_loss,medium
+Диагностирован хронический гепатит С требует противовирусной терапии и наблюдения,critical,gastroenterology,0.92,infectious_disease,high
+Профилактический осмотр у стоматолога выявил кариес 3 зубов требует лечения,normal,dentistry,0.88,dental_care,low
+Пациент с псориазом волосистой части головы получает местное лечение,moderate,dermatology,0.79,autoimmune_disease,medium
+Обнаружена доброкачественная опухоль щитовидной железы требует наблюдения,normal,endocrinology,0.90,thyroid_disease,low
+Пациент жалуется на боли в правом подреберье после жирной пищи холецистит,moderate,gastroenterology,0.83,digestive_disorders,medium
+Диагностирован остеоартроз коленных суставов 2 стадии требует физиотерапии,moderate,orthopedics,0.81,joint_disease,medium
+Профилактическая колоноскопия не выявила патологических образований кишечника,normal,gastroenterology,0.95,preventive_care,low
+Пациент с мочекаменной болезнью перенес дистанционную литотрипсию успешно,moderate,urology,0.89,kidney_stones,medium
+Выявлена язвенная болезнь желудка требует эрадикационной терапии хеликобактер пилори,moderate,gastroenterology,0.87,digestive_disorders,medium
+Профилактическое обследование щитовидной железы показало нормальные размеры и структуру,normal,endocrinology,0.96,preventive_care,low
+Пациент жалуется на одышку при подъеме на 3 этаж требуется обследование сердца и легких,moderate,cardiology,0.78,cardiovascular_health,medium
+Диагностирована миома матки небольших размеров рекомендовано динамическое наблюдение,normal,gynecology,0.90,reproductive_health,low
+Обнаружена повышенная кислотность желудочного сока назначена антисекреторная терапия,moderate,gastroenterology,0.83,digestive_disorders,medium
+Пациент с хронической сердечной недостаточностью получает ингибиторы АПФ и диуретики,critical,cardiology,0.91,cardiovascular_health,high
+Профилактический осмотр невролога не выявил очаговой неврологической симптоматики,normal,neurology,0.97,preventive_care,low
+Диагностирован подагрический артрит большого пальца стопы требует диетотерапии и лечения,moderate,rheumatology,0.84,metabolic_disorders,medium
+Пациент отмечает боли в эпигастрии после еды гастроскопия показала эрозивный гастрит,moderate,gastroenterology,0.82,digestive_disorders,medium
+Обнаружены множественные кисты почек требуется регулярное УЗИ контроль состояния,moderate,nephrology,0.86,kidney_disease,medium
+Профилактическая ЭКГ показала синусовый ритм без патологических изменений миокарда,normal,cardiology,0.98,preventive_care,low
+Пациент с атопическим дерматитом получает местное лечение кортикостероидными мазями,moderate,dermatology,0.81,autoimmune_disease,medium
+Диагностирована мастопатия молочных желез фиброзно-кистозная форма требует наблюдения,normal,gynecology,0.88,reproductive_health,low
+Пациент жалуется на частые носовые кровотечения требуется консультация отоларинголога,moderate,otolaryngology,0.79,bleeding_disorders,medium
+Обнаружена аденома гипофиза размером 5 мм требует гормонального обследования и МРТ контроля,moderate,endocrinology,0.87,hormone_disorders,medium
+Профилактический анализ крови показал нормальные показатели гемоглобина и лейкоцитов,normal,hematology,0.99,preventive_care,low
+Пациент с фибрилляцией предсердий получает антикоагулянтную терапию варфарином,critical,cardiology,0.93,cardiovascular_health,high
+Диагностирован хронический пиелонефрит в стадии ремиссии требует поддерживающей терапии,moderate,nephrology,0.82,kidney_disease,medium
+Пациент отмечает тремор рук и замедленность движений подозрение на болезнь Паркинсона,critical,neurology,0.88,neurological_disorders,high
+Обнаружена доброкачественная гиперплазия предстательной железы 1 стадии наблюдение,normal,urology,0.92,prostate_health,low
+Профилактическое УЗИ органов брюшной полости не выявило патологических изменений,normal,gastroenterology,0.97,preventive_care,low
+Пациент с бронхиальной астмой легкого течения использует ингаляционные бронходилататоры,moderate,pulmonology,0.85,chronic_disease,medium
+Диагностирована нейропатия нижних конечностей на фоне сахарного диабета требует лечения,moderate,neurology,0.84,diabetes_complications,medium
+Пациент жалуется на снижение памяти и концентрации внимания рекомендовано обследование,moderate,neurology,0.77,cognitive_disorders,medium
+Обнаружен полип толстой кишки размером 6 мм выполнена эндоскопическая полипэктомия,moderate,gastroenterology,0.89,cancer_prevention,medium
+Профилактическая денситометрия показала нормальную плотность костной ткани,normal,rheumatology,0.96,bone_health,low
+Пациент с язвенным колитом получает противовоспалительную терапию месалазином,moderate,gastroenterology,0.86,autoimmune_disease,medium
+Диагностирована диабетическая ретинопатия непролиферативная стадия требует лечения,critical,ophthalmology,0.90,diabetes_complications,high
+Пациент отмечает учащенное мочеиспускание ночью аденома простаты 2 стадии,moderate,urology,0.83,prostate_health,medium
+Обнаружена эрозия шейки матки рекомендована криодеструкция или лазерная коагуляция,moderate,gynecology,0.85,reproductive_health,medium
+Профилактический осмотр офтальмолога показал остроту зрения 1.0 на оба глаза,normal,ophthalmology,0.99,preventive_care,low
+Пациент с синдромом хронической усталости получает витаминотерапию и иммуномодуляторы,normal,general_practice,0.75,chronic_fatigue,low
+Диагностирован хронический синусит требует санации очагов инфекции и физиотерапии,moderate,otolaryngology,0.81,infectious_disease,medium
+Пациент жалуется на боли в пояснице с иррадиацией в ногу радикулопатия L5-S1,moderate,neurology,0.84,spine_disorders,medium
+Обнаружена киста яичника размером 4 см функциональная рекомендовано наблюдение,normal,gynecology,0.91,reproductive_health,low
+Профилактическая ЭхоКГ не выявила патологии клапанного аппарата и сократимости миокарда,normal,cardiology,0.98,preventive_care,low
+Диагностирован субклинический гипертиреоз требует контроля уровня ТТГ и Т4 свободного,moderate,endocrinology,0.85,thyroid_disease,medium
+Пациент с желчнокаменной болезнью находится на диспансерном учете регулярные УЗИ осмотры,moderate,gastroenterology,0.87,digestive_disorders,medium
+Обнаружена гематома мягких тканей после травмы рекомендовано консервативное лечение,normal,surgery,0.89,trauma_care,low
+Пациент отмечает повышенную потливость и раздражительность проверка гормонов щитовидной железы,moderate,endocrinology,0.76,hormone_disorders,medium
+Диагностирован сколиоз грудного отдела позвоночника 1 степени рекомендована ЛФК,normal,orthopedics,0.92,spine_disorders,low
+Профилактический осмотр дерматолога не выявил новообразований и изменений кожных покровов,normal,dermatology,0.97,preventive_care,low
+Пациент с гипервитаминозом витамина D рекомендовано прекратить прием препаратов,normal,general_practice,0.88,metabolic_disorders,low
+Обнаружена диастолическая дисфункция левого желудочка начальные проявления сердечной недостаточности,moderate,cardiology,0.84,cardiovascular_health,medium
+Диагностирован хронический тонзиллит в стадии компенсации рекомендовано санаторно-курортное лечение,normal,otolaryngology,0.91,infectious_disease,low
+Пациент жалуется на боли в правом боку при глубоком вдохе межреберная невралгия,moderate,neurology,0.78,pain_management,medium
+Обнаружен небольшой выпот в плевральной полости требуется динамическое наблюдение,moderate,pulmonology,0.86,respiratory_disease,medium
+Профилактический анализ на гормоны показал нормальные уровни кортизола и АКТГ,normal,endocrinology,0.96,preventive_care,low
+Пациент с метаболическим синдромом получает комплексную терапию и диетотерапию,moderate,endocrinology,0.83,metabolic_disorders,medium
+Диагностирована паховая грыжа справа рекомендовано плановое хирургическое лечение,moderate,surgery,0.88,surgical_treatment,medium
+Пациент отмечает периодические головные боли напряжения принимает анальгетики по требованию,normal,neurology,0.85,pain_management,low
+Обнаружена лейкоплакия слизистой оболочки рта требуется биопсия и консультация онколога,moderate,oncology,0.87,cancer_screening,medium
+Профилактическое обследование молочных желез методом УЗИ без патологических изменений,normal,gynecology,0.97,preventive_care,low
+Пациент с остеохондрозом шейного отдела позвоночника проходит курс физиотерапии,moderate,neurology,0.81,spine_disorders,medium
+Диагностирован хронический простатит в стадии ремиссии продолжение поддерживающей терапии,moderate,urology,0.84,prostate_health,medium
+Пациент жалуется на дискомфорт при глотании фиброгастроскопия выявила хронический фарингит,normal,otolaryngology,0.88,throat_disorders,low
+Обнаружена повышенная вязкость крови рекомендовано увеличить потребление жидкости,normal,hematology,0.90,blood_disorders,low
+Профилактический тест на толерантность к глюкозе показал нормальные показатели,normal,endocrinology,0.98,preventive_care,low
+Пациент с ожирением 1 степени получает рекомендации по снижению веса и физической активности,moderate,endocrinology,0.79,metabolic_disorders,medium
+Диагностирована контрактура Дюпюитрена ладонного апоневроза начальная стадия наблюдение,normal,orthopedics,0.91,hand_disorders,low
+Пациент отмечает жжение и зуд в области промежности кандидоз половых органов,moderate,gynecology,0.83,infectious_disease,medium
+Обнаружено расширение тени средостения на рентгенограмме требуется КТ обследование,moderate,pulmonology,0.85,respiratory_disease,medium
+Профилактический анализ спермограммы показал нормальные показатели фертильности,normal,urology,0.95,reproductive_health,low
+Пациент с хроническим гастродуоденитом соблюдает диету и принимает ингибиторы протонной помпы,moderate,gastroenterology,0.84,digestive_disorders,medium
+Диагностирована миопия слабой степени обоих глаз подбор очковой коррекции,normal,ophthalmology,0.93,vision_care,low
+Пациент жалуется на слабость и головокружение выявлена постуральная гипотензия,moderate,cardiology,0.78,cardiovascular_health,medium
+Обнаружена липома мягких тканей спины размером 3 см рекомендовано хирургическое удаление,normal,surgery,0.89,benign_tumor,low
+Профилактический осмотр проктолога не выявил патологии прямой кишки и анального канала,normal,surgery,0.97,preventive_care,low
+Пациент с синдромом апноэ сна рекомендовано обследование и подбор СИПАП-терапии,moderate,pulmonology,0.82,sleep_disorders,medium
+Диагностирована тендинопатия ахиллова сухожилия назначена противовоспалительная терапия,moderate,orthopedics,0.84,sports_medicine,medium
+Пациент отмечает ухудшение зрения в сумерках дефицит витамина А рекомендована витаминотерапия,normal,ophthalmology,0.87,nutritional_deficiency,low
+Обнаружен дивертикул пищевода небольших размеров рекомендовано динамическое наблюдение,normal,gastroenterology,0.90,digestive_disorders,low
+Профилактическая спирометрия показала нормальные показатели функции внешнего дыхания,normal,pulmonology,0.98,preventive_care,low
+Пациент с гипергидрозом ладоней и стоп получает ботулинотерапию и местное лечение,moderate,dermatology,0.81,autonomic_disorders,medium
+Диагностирована невралгия тройничного нерва назначена противосудорожная терапия,critical,neurology,0.89,pain_management,high
+Пациент жалуется на тяжесть в ногах к вечеру хроническая венозная недостаточность 1 степени,normal,vascular_surgery,0.86,cardiovascular_health,low
+Обнаружена пупочная грыжа небольших размеров рекомендовано ношение бандажа,normal,surgery,0.90,surgical_prevention,low
+Профилактический ректороманоскопия не выявила патологических изменений слизистой прямой кишки,normal,surgery,0.96,preventive_care,low
+Пациент с витилиго получает фототерапию и топические кортикостероиды,moderate,dermatology,0.79,autoimmune_disease,medium
+Диагностирован плоскостопие 2 степени рекомендовано ношение ортопедических стелек,normal,orthopedics,0.92,foot_disorders,low
+Пациент отмечает учащенное сердцебиение и потливость панические атаки консультация психотерапевта,moderate,psychiatry,0.77,anxiety_disorders,medium
+Обнаружена киста Бейкера подколенной ямки размером 2 см динамическое наблюдение,normal,orthopedics,0.91,joint_disorders,low
+Профилактический осмотр уролога у мужчины старше 50 лет без патологии предстательной железы,normal,urology,0.97,preventive_care,low
+Пациент с хроническим холециститом соблюдает диету номер 5 и принимает желчегонные препараты,moderate,gastroenterology,0.84,digestive_disorders,medium
+Диагностирована киста печени размером 4 см доброкачественная динамическое наблюдение,normal,gastroenterology,0.90,liver_disease,low
+Пациент жалуется на онемение пальцев рук туннельный синдром запястного канала,moderate,neurology,0.83,nerve_disorders,medium
+Обнаружена гиперплазия эндометрия рекомендовано гистологическое исследование,moderate,gynecology,0.87,reproductive_health,medium
