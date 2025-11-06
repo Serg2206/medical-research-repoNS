@@ -1,0 +1,71 @@
+name: Auto Refactoring
+
+on:
+  schedule:
+    - cron: '0 2 * * 6'  # Суббота в 2:00 UTC
+  workflow_dispatch:
+
+jobs:
+  auto-refactor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install tools
+        run: |
+          pip install openai autopep8 black isort
+          
+      - name: AI Refactoring
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python << 'EOF'
+          import os
+          import openai
+          from pathlib import Path
+          import subprocess
+          
+          openai.api_key = os.environ.get('OPENAI_API_KEY')
+          
+          print("🔧 Автоматическая оптимизация кода...\n")
+          
+          # Применяем autopep8
+          result = subprocess.run(['autopep8', '--in-place', '--recursive', '--aggressive', '.'], 
+                                capture_output=True, text=True)
+          print("✅ autopep8 применен")
+          
+          # Применяем black
+          result = subprocess.run(['black', '.'], capture_output=True, text=True)
+          print("✅ black применен")
+          
+          # Применяем isort
+          result = subprocess.run(['isort', '.'], capture_output=True, text=True)
+          print("✅ isort применен")
+          
+          print("\n🎉 Рефакторинг завершен!")
+          EOF
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "Auto Refactoring Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "🔧 Auto refactoring [automated]"
+          git push || echo "No changes"
+          
+      - name: Summary
+        run: |
+          echo "## 🔧 Auto Refactoring Complete" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Code automatically optimized" >> $GITHUB_STEP_SUMMARY
