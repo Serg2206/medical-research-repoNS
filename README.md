@@ -1,165 +1,169 @@
-# README.md
+# Medical Research Repository - Oncological Monograph Project
 
-## Medical Research Neural Network Repository
+## 📚 Проект: Монография по Double Tract Reconstruction при раках желудка
 
-Welcome to the `medical-research-repoNS`, a platform designed for advanced scientific and medical research using neural networks. This repository includes tools for data preprocessing, model training, evaluation, and deployment, tailored to medical datasets and research applications.
+Этот репозиторий содержит комплексное онкологическое исследование и монографию, посвященную методу **Double Tract Reconstruction** (двухпутевой реконструкции) при хирургическом лечении рака желудка.
 
-### Key Features
+### 🎯 Цель проекта
 
-- **Customizable Neural Network Architectures**: Support for a variety of architectures including:
-  - Convolutional Neural Networks (CNNs) for image-based diagnostics.
-  - Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) models for sequential medical data.
-  - Transformer-based models for natural language processing in medical records.
-  - Multi-task learning architectures for joint prediction tasks.
-  - Easily extendable for custom architectures with modular design.
-- **Data Processing Pipelines**: Built-in support for handling diverse medical data formats.
-- **High-Performance Training**: Optimized training loops with GPU support.
-- **Comprehensive Evaluation Tools**: Metrics and visualizations to assess model performance.
-- **Deployable Inference Pipelines**: Simplify predictions with pre-trained models.
+Создание научной монографии мирового уровня, объединяющей:
+- Современные хирургические техники онкологической гастрэктомии
+- Анализ методов реконструкции пищеварительного тракта
+- Клинические исследования и доказательную базу
+- Практические рекомендации для хирургов-онкологов
 
 ---
 
-## Repository Structure
+## 📂 Структура проекта
 
-```plaintext
+```
 medical-research-repoNS/
-├── data/               # Directory for storing datasets
-├── models/             # Pre-trained models and architecture definitions
-├── scripts/            # Python scripts for processing, training, and evaluation
-├── notebooks/          # Jupyter notebooks for experimentation
-├── results/            # Directory for storing outputs (logs, metrics, visualizations)
-├── docs/               # Documentation and guides
-├── requirements.txt    # Python dependencies
-├── train.py            # Main script for training
-├── infer.py            # Inference script
-├── README.md           # Documentation (this file)
+├── monograph/                          # Основная папка монографии
+│   ├── chapters/                       # Главы монографии
+│   │   └── manuscript_double_tract.md  # Введение и Глава 1 (6000+ слов)
+│   ├── images/                         # Медицинские иллюстрации
+│   │   ├── 01_anatomy.jpg             # Анатомия желудка и пищевода
+│   │   ├── 02_reconstruction.jpg      # Схема реконструкции
+│   │   ├── 03_surgical_steps.jpg      # Этапы операции
+│   │   ├── 04_food_flow.jpg           # Пути прохождения пищи
+│   │   └── 05_comparison.jpg          # Сравнение методов
+│   ├── tools/                          # Инструменты генерации
+│   │   └── manuscript_generator.py     # Генератор документов (~900 строк)
+│   ├── output/                         # Выходные файлы
+│   │   ├── *.docx                     # Документы Word
+│   │   ├── *.html                     # HTML версии
+│   │   └── *.pdf                      # PDF документы
+│   ├── docs/                           # Документация проекта
+│   │   ├── README.md                  # Основная документация
+│   │   ├── USAGE_EXAMPLES.md          # Примеры использования
+│   │   ├── GETTING_STARTED.md         # Руководство для начинающих
+│   │   └── PROJECT_SUMMARY.md         # Краткое описание проекта
+│   ├── config.yaml                     # Конфигурация генератора
+│   ├── requirements.txt                # Python зависимости
+│   └── double_tract_research.md        # Исследование (4500+ слов)
+└── .github/
+    └── workflows/
+        └── generate-monograph.yml      # Автоматизация GitHub Actions
 ```
 
 ---
 
-## Installation
+## 🚀 Быстрый старт
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Serg2206/medical-research-repoNS.git
-   cd medical-research-repoNS
-   ```
+### Установка зависимостей
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Ensure you have the appropriate libraries for GPU acceleration (e.g., CUDA, cuDNN) if available.
-
----
-
-## Usage
-
-### 1. Data Preparation
-
-Store raw data in the `data/` directory. The raw data should be in CSV format with the following structure:
-
-| ID   | Feature1 | Feature2 | Feature3 | Label   |
-|------|----------|----------|----------|---------|
-| 1    | 0.5      | 1.2      | 3.4      | Healthy |
-| 2    | 2.1      | 0.8      | 1.1      | Sick    |
-| ...  | ...      | ...      | ...      | ...     |
-
-Use the provided script for preprocessing:
 ```bash
-python scripts/prepare_data.py --input data/raw_dataset.csv --output data/processed_data.csv
+cd monograph
+pip install -r requirements.txt
 ```
 
-### 2. Training the Model
+### Генерация документов
 
-Train a neural network using the `train.py` script:
 ```bash
-python train.py --config configs/train_config.json
-```
-#### Arguments:
-- `--config`: Path to the JSON file with training configurations. This file specifies key parameters such as model type, learning rate, batch size, and training duration. Refer to the example configuration below:
+# Генерация всех форматов (DOCX, HTML, PDF)
+python tools/manuscript_generator.py chapters/manuscript_double_tract.md
 
-Example training configuration (`configs/train_config.json`):
-```json
-{
-  "model": "resnet50",
-  "epochs": 50,
-  "batch_size": 32,
-  "learning_rate": 0.001,
-  "optimizer": "adam",
-  "loss_function": "cross_entropy",
-  "metrics": ["accuracy", "precision", "recall"],
-  "device": "cuda"
-}
-```
-To modify the configuration:
-1. Open `configs/train_config.json` in a text editor.
-2. Adjust the values of the parameters as needed (e.g., change `model` to "transformer" or update `learning_rate`).
-3. Save the file and rerun the training script.
-
-For more examples, see `docs/config_examples.md` or the `notebooks/` directory.
-
-### 3. Model Evaluation
-
-Evaluate the trained model on a test dataset:
-```bash
-python scripts/evaluate.py --model models/trained_model.pth --data data/test_data.csv
-```
-
-### 4. Inference
-
-Generate predictions using the `infer.py` script:
-```bash
-python infer.py --input data/new_samples.csv --model models/trained_model.pth --output results/predictions.csv
+# Генерация конкретного формата
+python tools/manuscript_generator.py chapters/manuscript_double_tract.md --format docx
+python tools/manuscript_generator.py chapters/manuscript_double_tract.md --format html
+python tools/manuscript_generator.py chapters/manuscript_double_tract.md --format pdf
 ```
 
 ---
 
-## Examples
+## 📖 Содержание монографии
 
-Explore the `notebooks/` directory for detailed examples, including:
-- **eda.ipynb**: Exploratory Data Analysis (EDA) with medical datasets.
-- **training_visualization.ipynb**: Training visualizations including loss curves and accuracy plots.
-- **fine_tuning.ipynb**: Fine-tuning pre-trained models for domain-specific tasks.
-- **model_evaluation.ipynb**: Model evaluation and performance analysis with real-world datasets.
+### ✅ Готовые разделы
 
----
+1. **Введение** - Обоснование актуальности, цели и задачи исследования
+2. **Глава 1: Анатомия и физиология верхних отделов ЖКТ**
+   - Анатомическое строение желудка и пищевода
+   - Физиология пищеварения
+   - Патофизиология при раке желудка
 
-## Contributing
+### 🔄 В разработке
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -m "Add new feature"`
-4. Push to your fork: `git push origin feature-name`
-5. Create a Pull Request.
-
-### Coding Standards and Testing Protocols
-- Follow PEP 8 coding style guidelines for Python scripts.
-- Ensure all new features or fixes include relevant unit tests.
-- Run tests locally using `pytest` before submitting a pull request:
-  ```bash
-  pytest tests/
-  ```
-- Document any changes in the `CHANGELOG.md` file.
+3. **Глава 2: Хирургические методы реконструкции**
+4. **Глава 3: Double Tract Reconstruction - техника и показания**
+5. **Глава 4: Клинические исследования и результаты**
+6. **Глава 5: Осложнения и их профилактика**
+7. **Заключение и перспективы**
 
 ---
 
-## License
+## 🛠️ Инструмент генерации документов
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+### Возможности `manuscript_generator.py`
+
+- ✅ Конвертация Markdown → DOCX, HTML, PDF
+- ✅ Автоматическая нумерация разделов и подразделов
+- ✅ Генерация оглавления с гиперссылками
+- ✅ Обработка медицинских иллюстраций
+- ✅ Форматирование таблиц и списков
+- ✅ Поддержка библиографии и цитирований
+- ✅ Настраиваемые стили и шаблоны
+
+### Конфигурация
+
+Настройки генератора находятся в `config.yaml`:
+
+```yaml
+document:
+  title: "Double Tract Reconstruction при раках желудка"
+  author: "Исследовательская группа"
+  language: "ru"
+  
+formatting:
+  page_size: "A4"
+  margins: "2.5cm"
+  font: "Times New Roman"
+  font_size: 12
+```
 
 ---
 
-## Contact
+## 📊 Статистика проекта
 
-For questions, issues, or suggestions, feel free to contact the maintainer:
-
-- **Name**: Serg
-- **Email**: [example@domain.com](mailto:example@domain.com)
+- **Объем исследования**: 4500+ слов
+- **Объем монографии**: 6000+ слов (введение + глава 1)
+- **Медицинских иллюстраций**: 5 изображений
+- **Строк кода генератора**: ~900 строк
+- **Форматы экспорта**: DOCX, HTML, PDF
 
 ---
 
-Happy researching!
+## 🔬 Научная значимость
+
+Монография представляет собой:
+
+1. **Систематизацию знаний** о современных методах реконструкции после гастрэктомии
+2. **Анализ клинических данных** по эффективности Double Tract Reconstruction
+3. **Практическое руководство** для хирургов-онкологов
+4. **Основу для дальнейших исследований** в области онкохирургии
+
+---
+
+## 🤝 Вклад в проект
+
+Проект открыт для сотрудничества с:
+- Хирургами-онкологами
+- Исследователями в области гастроэнтерологии
+- Медицинскими иллюстраторами
+- Специалистами по медицинской документации
+
+---
+
+## 📝 Лицензия
+
+Материалы предназначены для научных и образовательных целей.
+
+---
+
+## 📧 Контакты
+
+Для вопросов и предложений по проекту обращайтесь через Issues данного репозитория.
+
+---
+
+**Последнее обновление**: Ноябрь 2025  
+**Статус**: Активная разработка
