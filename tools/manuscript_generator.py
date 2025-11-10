@@ -13,6 +13,13 @@ from datetime import datetime
 from typing import Dict, List, Optional
 import argparse
 
+# Import visual components module
+from visual_components import (
+    ImageGallery, MultiPanelFigure, AnnotatedImage, 
+    ComparisonSlider, StepByStepProcedure, SurgicalPhotoPanel,
+    ImageMetadata, Annotation, PanelLayout
+)
+
 
 class ManuscriptGenerator:
     """Генератор профессиональных медицинских рукописей"""
@@ -157,6 +164,460 @@ class ManuscriptGenerator:
 '''
         return html
     
+    def process_visual_content(self, content: str, base_dir: str = "") -> str:
+        """
+        Process all visual content syntax in the manuscript.
+        
+        Supported syntax:
+        - :::gallery ... :::
+        - :::figure-panel ... :::
+        - :::annotated-image ... :::
+        - :::comparison ... :::
+        - :::procedure-steps ... :::
+        - :::surgical-photos ... :::
+        """
+        content = self.process_image_gallery(content, base_dir)
+        content = self.process_multi_panel_figure(content, base_dir)
+        content = self.process_annotated_image(content, base_dir)
+        content = self.process_comparison_slider(content, base_dir)
+        content = self.process_procedure_steps(content, base_dir)
+        content = self.process_surgical_photos(content, base_dir)
+        
+        return content
+    
+    def process_image_gallery(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::gallery ... ::: blocks
+        
+        Syntax:
+        :::gallery columns=3 caption="Gallery title"
+        - image1.jpg | Alt text 1 | Caption 1
+        - image2.jpg | Alt text 2 | Caption 2
+        :::
+        """
+        pattern = r':::gallery\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_gallery(match):
+            # Parse attributes
+            attrs_str = match.group(1)
+            images_str = match.group(2)
+            
+            columns = 3
+            caption = None
+            enable_lightbox = True
+            
+            # Parse attributes
+            if 'columns=' in attrs_str:
+                columns_match = re.search(r'columns=(\d+)', attrs_str)
+                if columns_match:
+                    columns = int(columns_match.group(1))
+            
+            if 'caption=' in attrs_str:
+                caption_match = re.search(r'caption="([^"]+)"', attrs_str)
+                if caption_match:
+                    caption = caption_match.group(1)
+            
+            if 'lightbox=false' in attrs_str:
+                enable_lightbox = False
+            
+            # Parse images
+            images = []
+            for line in images_str.strip().split('\n'):
+                if line.startswith('- '):
+                    parts = [p.strip() for p in line[2:].split('|')]
+                    if len(parts) >= 2:
+                        img_path = parts[0]
+                        alt_text = parts[1]
+                        img_caption = parts[2] if len(parts) > 2 else None
+                        
+                        images.append(ImageMetadata(
+                            path=img_path,
+                            alt_text=alt_text,
+                            caption=img_caption
+                        ))
+            
+            # Generate gallery HTML
+            gallery = ImageGallery(
+                images=images,
+                columns=columns,
+                enable_lightbox=enable_lightbox,
+                caption=caption
+            )
+            
+            return gallery.generate_html()
+        
+        return re.sub(pattern, replace_gallery, content, flags=re.DOTALL)
+    
+    def process_multi_panel_figure(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::figure-panel ... ::: blocks
+        
+        Syntax:
+        :::figure-panel layout=2x2 number="1" caption="Multi-panel figure"
+        - A: image1.jpg | Alt text 1 | Panel A caption
+        - B: image2.jpg | Alt text 2 | Panel B caption
+        :::
+        """
+        pattern = r':::figure-panel\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_panel(match):
+            attrs_str = match.group(1)
+            panels_str = match.group(2)
+            
+            # Parse attributes
+            layout = PanelLayout.GRID_2x2
+            figure_number = None
+            caption = None
+            
+            if 'layout=' in attrs_str:
+                layout_match = re.search(r'layout=([\dx]+)', attrs_str)
+                if layout_match:
+                    layout_str = layout_match.group(1).upper()
+                    try:
+                        layout = PanelLayout(f"GRID_{layout_str.replace('X', 'x')}")
+                    except ValueError:
+                        layout = PanelLayout.GRID_2x2
+            
+            if 'number=' in attrs_str:
+                number_match = re.search(r'number="([^"]+)"', attrs_str)
+                if number_match:
+                    figure_number = number_match.group(1)
+                else:
+                    self.figure_counter += 1
+                    figure_number = str(self.figure_counter)
+            
+            if 'caption=' in attrs_str:
+                caption_match = re.search(r'caption="([^"]+)"', attrs_str)
+                if caption_match:
+                    caption = caption_match.group(1)
+            
+            # Parse panels
+            panels = []
+            for line in panels_str.strip().split('\n'):
+                if line.startswith('- '):
+                    # Format: - A: image.jpg | Alt text | Caption
+                    line_content = line[2:].strip()
+                    
+                    label = None
+                    if ':' in line_content:
+                        label, rest = line_content.split(':', 1)
+                        label = label.strip()
+                        line_content = rest.strip()
+                    
+                    parts = [p.strip() for p in line_content.split('|')]
+                    if len(parts) >= 2:
+                        img_path = parts[0]
+                        alt_text = parts[1]
+                        panel_caption = parts[2] if len(parts) > 2 else None
+                        
+                        panels.append(ImageMetadata(
+                            path=img_path,
+                            alt_text=alt_text,
+                            caption=panel_caption,
+                            label=label
+                        ))
+            
+            # Generate multi-panel figure HTML
+            figure = MultiPanelFigure(
+                panels=panels,
+                layout=layout,
+                figure_number=figure_number,
+                caption=caption,
+                auto_label=(not any(p.label for p in panels))
+            )
+            
+            return figure.generate_html()
+        
+        return re.sub(pattern, replace_panel, content, flags=re.DOTALL)
+    
+    def process_annotated_image(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::annotated-image ... ::: blocks
+        
+        Syntax:
+        :::annotated-image number="2" caption="Annotated surgical view"
+        image: surgery.jpg | Alt text for surgery
+        annotations:
+        - arrow: 50, 30 | Target structure | red
+        - circle: 60, 40 | yellow
+        - label: 70, 20 | Important landmark | white
+        :::
+        """
+        pattern = r':::annotated-image\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_annotated(match):
+            attrs_str = match.group(1)
+            content_str = match.group(2)
+            
+            # Parse attributes
+            figure_number = None
+            if 'number=' in attrs_str:
+                number_match = re.search(r'number="([^"]+)"', attrs_str)
+                if number_match:
+                    figure_number = number_match.group(1)
+            
+            # Parse image and annotations
+            image = None
+            annotations = []
+            
+            lines = content_str.strip().split('\n')
+            in_annotations = False
+            
+            for line in lines:
+                line = line.strip()
+                
+                if line.startswith('image:'):
+                    img_content = line[6:].strip()
+                    parts = [p.strip() for p in img_content.split('|')]
+                    if len(parts) >= 2:
+                        image = ImageMetadata(
+                            path=parts[0],
+                            alt_text=parts[1],
+                            caption=parts[2] if len(parts) > 2 else None
+                        )
+                
+                elif line.startswith('annotations:'):
+                    in_annotations = True
+                
+                elif in_annotations and line.startswith('- '):
+                    # Format: - type: x, y | text | color
+                    ann_content = line[2:].strip()
+                    
+                    # Parse annotation type and coordinates
+                    if ':' in ann_content:
+                        ann_type, rest = ann_content.split(':', 1)
+                        ann_type = ann_type.strip()
+                        rest = rest.strip()
+                        
+                        parts = [p.strip() for p in rest.split('|')]
+                        
+                        # Parse coordinates
+                        coords = parts[0].split(',')
+                        x = float(coords[0].strip()) if len(coords) > 0 else 50
+                        y = float(coords[1].strip()) if len(coords) > 1 else 50
+                        
+                        text = parts[1] if len(parts) > 1 else None
+                        color = parts[2] if len(parts) > 2 else "red"
+                        
+                        annotations.append(Annotation(
+                            type=ann_type,
+                            text=text,
+                            x=x,
+                            y=y,
+                            color=color
+                        ))
+            
+            if image:
+                # Generate annotated image HTML
+                annotated = AnnotatedImage(
+                    image=image,
+                    annotations=annotations,
+                    figure_number=figure_number
+                )
+                return annotated.generate_html()
+            
+            return match.group(0)  # Return original if parsing failed
+        
+        return re.sub(pattern, replace_annotated, content, flags=re.DOTALL)
+    
+    def process_comparison_slider(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::comparison ... ::: blocks
+        
+        Syntax:
+        :::comparison number="3" caption="Before and after treatment"
+        before: before.jpg | Pre-operative image
+        after: after.jpg | Post-operative image
+        :::
+        """
+        pattern = r':::comparison\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_comparison(match):
+            attrs_str = match.group(1)
+            content_str = match.group(2)
+            
+            # Parse attributes
+            figure_number = None
+            caption = None
+            
+            if 'number=' in attrs_str:
+                number_match = re.search(r'number="([^"]+)"', attrs_str)
+                if number_match:
+                    figure_number = number_match.group(1)
+            
+            if 'caption=' in attrs_str:
+                caption_match = re.search(r'caption="([^"]+)"', attrs_str)
+                if caption_match:
+                    caption = caption_match.group(1)
+            
+            # Parse before/after images
+            before_image = None
+            after_image = None
+            
+            for line in content_str.strip().split('\n'):
+                line = line.strip()
+                
+                if line.startswith('before:'):
+                    img_content = line[7:].strip()
+                    parts = [p.strip() for p in img_content.split('|')]
+                    if len(parts) >= 2:
+                        before_image = ImageMetadata(
+                            path=parts[0],
+                            alt_text=parts[1]
+                        )
+                
+                elif line.startswith('after:'):
+                    img_content = line[6:].strip()
+                    parts = [p.strip() for p in img_content.split('|')]
+                    if len(parts) >= 2:
+                        after_image = ImageMetadata(
+                            path=parts[0],
+                            alt_text=parts[1]
+                        )
+            
+            if before_image and after_image:
+                # Generate comparison slider HTML
+                comparison = ComparisonSlider(
+                    before_image=before_image,
+                    after_image=after_image,
+                    caption=caption,
+                    figure_number=figure_number
+                )
+                return comparison.generate_html()
+            
+            return match.group(0)
+        
+        return re.sub(pattern, replace_comparison, content, flags=re.DOTALL)
+    
+    def process_procedure_steps(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::procedure-steps ... ::: blocks
+        
+        Syntax:
+        :::procedure-steps title="Laparoscopic Technique" number="4" layout="vertical"
+        - step1.jpg | Initial trocar placement | Port insertion at umbilicus
+        - step2.jpg | Dissection phase | Mobilization of greater curvature
+        - step3.jpg | Resection | Gastric transection
+        :::
+        """
+        pattern = r':::procedure-steps\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_procedure(match):
+            attrs_str = match.group(1)
+            steps_str = match.group(2)
+            
+            # Parse attributes
+            title = None
+            figure_number = None
+            layout = "vertical"
+            
+            if 'title=' in attrs_str:
+                title_match = re.search(r'title="([^"]+)"', attrs_str)
+                if title_match:
+                    title = title_match.group(1)
+            
+            if 'number=' in attrs_str:
+                number_match = re.search(r'number="([^"]+)"', attrs_str)
+                if number_match:
+                    figure_number = number_match.group(1)
+            
+            if 'layout=' in attrs_str:
+                layout_match = re.search(r'layout="([^"]+)"', attrs_str)
+                if layout_match:
+                    layout = layout_match.group(1)
+            
+            # Parse steps
+            steps = []
+            for line in steps_str.strip().split('\n'):
+                if line.startswith('- '):
+                    parts = [p.strip() for p in line[2:].split('|')]
+                    if len(parts) >= 2:
+                        img_path = parts[0]
+                        alt_text = parts[1]
+                        step_caption = parts[2] if len(parts) > 2 else None
+                        
+                        steps.append(ImageMetadata(
+                            path=img_path,
+                            alt_text=alt_text,
+                            caption=step_caption
+                        ))
+            
+            # Generate procedure steps HTML
+            procedure = StepByStepProcedure(
+                steps=steps,
+                title=title,
+                layout=layout,
+                figure_number=figure_number
+            )
+            
+            return procedure.generate_html()
+        
+        return re.sub(pattern, replace_procedure, content, flags=re.DOTALL)
+    
+    def process_surgical_photos(self, content: str, base_dir: str = "") -> str:
+        """
+        Process :::surgical-photos ... ::: blocks
+        
+        Syntax:
+        :::surgical-photos title="Intraoperative Findings" number="5" columns=2
+        - photo1.jpg | Surgical view 1 | Tumor location
+        - photo2.jpg | Surgical view 2 | After resection
+        :::
+        """
+        pattern = r':::surgical-photos\s*(.*?)\n(.*?)\n:::'
+        
+        def replace_surgical(match):
+            attrs_str = match.group(1)
+            photos_str = match.group(2)
+            
+            # Parse attributes
+            title = None
+            figure_number = None
+            columns = 2
+            
+            if 'title=' in attrs_str:
+                title_match = re.search(r'title="([^"]+)"', attrs_str)
+                if title_match:
+                    title = title_match.group(1)
+            
+            if 'number=' in attrs_str:
+                number_match = re.search(r'number="([^"]+)"', attrs_str)
+                if number_match:
+                    figure_number = number_match.group(1)
+            
+            if 'columns=' in attrs_str:
+                columns_match = re.search(r'columns=(\d+)', attrs_str)
+                if columns_match:
+                    columns = int(columns_match.group(1))
+            
+            # Parse photos
+            photos = []
+            for line in photos_str.strip().split('\n'):
+                if line.startswith('- '):
+                    parts = [p.strip() for p in line[2:].split('|')]
+                    if len(parts) >= 2:
+                        img_path = parts[0]
+                        alt_text = parts[1]
+                        photo_caption = parts[2] if len(parts) > 2 else None
+                        
+                        photos.append(ImageMetadata(
+                            path=img_path,
+                            alt_text=alt_text,
+                            caption=photo_caption
+                        ))
+            
+            # Generate surgical photo panel HTML
+            panel = SurgicalPhotoPanel(
+                photos=photos,
+                title=title,
+                columns=columns,
+                figure_number=figure_number
+            )
+            
+            return panel.generate_html()
+        
+        return re.sub(pattern, replace_surgical, content, flags=re.DOTALL)
+    
     def process_tables(self, content: str) -> str:
         """Обрабатывает таблицы и добавляет профессиональное форматирование"""
         
@@ -223,6 +684,7 @@ class ManuscriptGenerator:
         
         # Предобработка специальных блоков
         markdown_content = self.process_special_boxes(markdown_content)
+        markdown_content = self.process_visual_content(markdown_content)  # NEW: Process visual content
         markdown_content = self.process_tables(markdown_content)
         markdown_content = self.process_figures(markdown_content)
         
@@ -264,6 +726,7 @@ class ManuscriptGenerator:
             {body}
         </main>
     </article>
+    <script src="../tools/scripts/visual-interactions.js"></script>
 </body>
 </html>'''
     
