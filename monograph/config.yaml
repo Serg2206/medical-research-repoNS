@@ -1,0 +1,112 @@
+
+# Manuscript Generator Configuration
+# ==================================
+# Configuration file for scientific document generation
+
+# Document metadata
+document:
+  title: "Scientific Medical Manuscript"
+  author: "Research Team"
+  date: "2025-11-10"
+  language: "en"  # Language code (en, ru, etc.)
+  paper_size: "A4"  # A4, Letter, Legal
+
+# Formatting settings
+formatting:
+  font_family: "Times New Roman"
+  font_size: 12  # Points
+  line_spacing: 1.5  # Line spacing multiplier
+  margins:
+    top: 2.54    # Centimeters
+    bottom: 2.54
+    left: 2.54
+    right: 2.54
+
+# Style definitions
+styles:
+  heading1:
+    font_size: 16
+    bold: true
+    color: "000000"
+    space_before: 24
+    space_after: 12
+  
+  heading2:
+    font_size: 14
+    bold: true
+    color: "000000"
+    space_before: 18
+    space_after: 10
+  
+  heading3:
+    font_size: 12
+    bold: true
+    color: "000000"
+    space_before: 14
+    space_after: 8
+  
+  body:
+    font_size: 12
+    alignment: "justify"  # left, center, right, justify
+    space_after: 12
+
+# Numbering options
+numbering:
+  sections: true  # Enable section numbering
+  figures: true   # Enable figure numbering
+  tables: true    # Enable table numbering
+  format: "decimal"  # decimal (1.1), roman (I.i), letter (A.a)
+
+# Table of Contents settings
+toc:
+  enabled: true
+  depth: 3  # Maximum heading level to include (1-6)
+  page_break_after: true
+  show_page_numbers: true
+
+# Bibliography/References settings
+bibliography:
+  enabled: true
+  style: "numbered"  # numbered, apa, mla, chicago
+  title: "References"
+  include_urls: true
+
+# Index settings
+index:
+  enabled: true
+  title: "Index"
+  alphabetical: true
+
+# Figure settings
+figures:
+  numbering: true
+  caption_position: "below"  # above, below
+  include_list: true  # Include list of figures
+
+# Table settings
+tables:
+  numbering: true
+  caption_position: "above"  # above, below
+  include_list: true  # Include list of tables
+
+# Output settings
+output:
+  formats:
+    - docx
+    - html
+    - pdf
+  output_dir: "./output"
+  filename_template: "{basename}_{date}"  # {basename}, {date}, {author}
+
+# Microsoft Publisher compatibility
+publisher:
+  optimize_for_publisher: true
+  include_styles_xml: true
+  embed_fonts: false
+
+# Advanced options
+advanced:
+  generate_metadata: true
+  include_word_count: true
+  create_backup: true
+  verbose_logging: false
