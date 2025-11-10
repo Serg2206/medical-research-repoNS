@@ -1,0 +1,23 @@
+{
+  "total_new_images": 2,
+  "images": [
+    {
+      "filename": "Springer_DTR_Figure_1200x650.png",
+      "category": "3d-reconstructions",
+      "source": "Springer - DTR Figure",
+      "license": "Open Access",
+      "procedure": "Double Tract Reconstruction",
+      "dimensions": "1200x650",
+      "format": "png"
+    },
+    {
+      "filename": "Wikimedia_Billroth_II_1200x922.png",
+      "category": "3d-reconstructions",
+      "source": "Wikimedia - Billroth II",
+      "license": "CC BY-SA 4.0",
+      "procedure": "Billroth II Gastrectomy",
+      "dimensions": "1200x922",
+      "format": "png"
+    }
+  ]
+}
