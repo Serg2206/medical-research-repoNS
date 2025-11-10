@@ -1,165 +1,327 @@
-# README.md
+# 📚 Профессиональный генератор медицинских рукописей
 
-## Medical Research Neural Network Repository
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
 
-Welcome to the `medical-research-repoNS`, a platform designed for advanced scientific and medical research using neural networks. This repository includes tools for data preprocessing, model training, evaluation, and deployment, tailored to medical datasets and research applications.
+> Система автоматической генерации профессионально отформатированных медицинских научных рукописей, основанная на анализе ведущих медицинских журналов мира.
 
-### Key Features
+## 🎯 Основные возможности
 
-- **Customizable Neural Network Architectures**: Support for a variety of architectures including:
-  - Convolutional Neural Networks (CNNs) for image-based diagnostics.
-  - Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) models for sequential medical data.
-  - Transformer-based models for natural language processing in medical records.
-  - Multi-task learning architectures for joint prediction tasks.
-  - Easily extendable for custom architectures with modular design.
-- **Data Processing Pipelines**: Built-in support for handling diverse medical data formats.
-- **High-Performance Training**: Optimized training loops with GPU support.
-- **Comprehensive Evaluation Tools**: Metrics and visualizations to assess model performance.
-- **Deployable Inference Pipelines**: Simplify predictions with pre-trained models.
+- ✅ **Профессиональное форматирование** согласно стандартам Nature, Lancet, BMC Surgery, NCCN
+- ✅ **Специальные компоненты**: Key Points, Warnings, Clinical Implications, Evidence Grading
+- ✅ **Красивые таблицы** в стиле высокорейтинговых изданий
+- ✅ **Автоматическая нумерация** рисунков, таблиц, ссылок
+- ✅ **Адаптивный дизайн** для печати и веб-версий
+- ✅ **Массовая обработка** документов
+- ✅ **Генерация PDF** из HTML
+- ✅ **Валидация качества** рукописей
 
----
+## 🚀 Быстрый старт
 
-## Repository Structure
+### Установка
 
-```plaintext
+```bash
+# Клонируйте репозиторий
+git clone https://github.com/Serg2206/medical-research-repoNS.git
+cd medical-research-repoNS
+
+# Установите зависимости
+pip3 install markdown Pygments
+
+# Опционально: для генерации PDF
+sudo apt-get install wkhtmltopdf
+```
+
+### Первая рукопись за 3 шага
+
+```bash
+# 1. Создайте Markdown файл
+echo "# Моя первая рукопись" > my-paper.md
+
+# 2. Конвертируйте в HTML
+python3 tools/manuscript_generator.py my-paper.md
+
+# 3. Создайте PDF (опционально)
+bash tools/generate_pdf.sh my-paper.html
+```
+
+**🎉 Готово! Ваша профессиональная рукопись создана!**
+
+Подробнее: [QUICK_START.md](QUICK_START.md)
+
+## 📖 Документация
+
+- **[Быстрый старт](QUICK_START.md)** - начните работу за 5 минут
+- **[Полная документация](tools/README.md)** - подробное руководство
+- **[Примеры компонентов](tools/templates/components-examples.md)** - все доступные компоненты
+- **[Руководство по форматированию](training-materials/professional-formatting-guide-RU.md)** - профессиональные стандарты
+
+## 🎨 Примеры специальных компонентов
+
+### Key Points Box
+
+```markdown
+:::key-points
+- Первый важный пункт
+- Второй важный пункт
+:::
+```
+
+### Evidence Grading
+
+```markdown
+:::evidence-grading high
+Метаанализ 15 РКИ (n=3,245) показал статистически значимое снижение (p<0.001).
+:::
+```
+
+### Warning Box
+
+```markdown
+:::warning
+Критическая информация или противопоказания
+:::
+```
+
+### Clinical Implications
+
+```markdown
+:::clinical-implications
+Клиническое значение результатов исследования...
+:::
+```
+
+## 📊 Структура проекта
+
+```
 medical-research-repoNS/
-├── data/               # Directory for storing datasets
-├── models/             # Pre-trained models and architecture definitions
-├── scripts/            # Python scripts for processing, training, and evaluation
-├── notebooks/          # Jupyter notebooks for experimentation
-├── results/            # Directory for storing outputs (logs, metrics, visualizations)
-├── docs/               # Documentation and guides
-├── requirements.txt    # Python dependencies
-├── train.py            # Main script for training
-├── infer.py            # Inference script
-├── README.md           # Documentation (this file)
+├── tools/                          # Основные инструменты
+│   ├── manuscript_generator.py     # Генератор рукописей
+│   ├── batch_convert.py            # Массовая конвертация
+│   ├── generate_pdf.sh             # Генерация PDF
+│   ├── validate_manuscript.py      # Валидатор качества
+│   ├── styles/                     # CSS стили
+│   │   └── professional-medical.css
+│   ├── templates/                  # HTML шаблоны
+│   └── utils/                      # Вспомогательные утилиты
+├── manuscripts/                    # Ваши рукописи (Markdown)
+│   └── surgical-techniques/
+│       ├── double-tract-reconstruction.md
+│       └── double-tract-reconstruction-enhanced.md
+├── generated_manuscripts/          # Сгенерированные HTML
+├── training-materials/             # Обучающие материалы
+│   ├── formatting-specifications.json
+│   └── professional-formatting-guide-RU.md
+├── README.md                       # Этот файл
+├── QUICK_START.md                  # Быстрый старт
+└── .github/workflows/              # CI/CD (опционально)
 ```
 
----
+## 🛠️ Доступные инструменты
 
-## Installation
+### 1. manuscript_generator.py
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Serg2206/medical-research-repoNS.git
-   cd medical-research-repoNS
-   ```
+Основной генератор рукописей.
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Ensure you have the appropriate libraries for GPU acceleration (e.g., CUDA, cuDNN) if available.
-
----
-
-## Usage
-
-### 1. Data Preparation
-
-Store raw data in the `data/` directory. The raw data should be in CSV format with the following structure:
-
-| ID   | Feature1 | Feature2 | Feature3 | Label   |
-|------|----------|----------|----------|---------|
-| 1    | 0.5      | 1.2      | 3.4      | Healthy |
-| 2    | 2.1      | 0.8      | 1.1      | Sick    |
-| ...  | ...      | ...      | ...      | ...     |
-
-Use the provided script for preprocessing:
 ```bash
-python scripts/prepare_data.py --input data/raw_dataset.csv --output data/processed_data.csv
+python3 tools/manuscript_generator.py INPUT.md -o OUTPUT.html
 ```
 
-### 2. Training the Model
+### 2. batch_convert.py
 
-Train a neural network using the `train.py` script:
+Массовая конвертация документов.
+
 ```bash
-python train.py --config configs/train_config.json
+python3 tools/batch_convert.py manuscripts/ -o generated_manuscripts/
 ```
-#### Arguments:
-- `--config`: Path to the JSON file with training configurations. This file specifies key parameters such as model type, learning rate, batch size, and training duration. Refer to the example configuration below:
 
-Example training configuration (`configs/train_config.json`):
-```json
-{
-  "model": "resnet50",
-  "epochs": 50,
-  "batch_size": 32,
-  "learning_rate": 0.001,
-  "optimizer": "adam",
-  "loss_function": "cross_entropy",
-  "metrics": ["accuracy", "precision", "recall"],
-  "device": "cuda"
-}
-```
-To modify the configuration:
-1. Open `configs/train_config.json` in a text editor.
-2. Adjust the values of the parameters as needed (e.g., change `model` to "transformer" or update `learning_rate`).
-3. Save the file and rerun the training script.
+### 3. generate_pdf.sh
 
-For more examples, see `docs/config_examples.md` or the `notebooks/` directory.
+Генерация PDF из HTML.
 
-### 3. Model Evaluation
-
-Evaluate the trained model on a test dataset:
 ```bash
-python scripts/evaluate.py --model models/trained_model.pth --data data/test_data.csv
+bash tools/generate_pdf.sh manuscript.html
 ```
 
-### 4. Inference
+### 4. validate_manuscript.py
 
-Generate predictions using the `infer.py` script:
+Проверка качества рукописи.
+
 ```bash
-python infer.py --input data/new_samples.csv --model models/trained_model.pth --output results/predictions.csv
+python3 tools/validate_manuscript.py manuscript.md
 ```
 
+## 📈 Примеры использования
+
+### Пример 1: Одна рукопись
+
+```bash
+# Напишите рукопись
+vim manuscripts/my-research.md
+
+# Конвертируйте
+python3 tools/manuscript_generator.py \
+    manuscripts/my-research.md \
+    -o output/my-research.html
+
+# Создайте PDF
+bash tools/generate_pdf.sh output/my-research.html
+```
+
+### Пример 2: Массовая обработка
+
+```bash
+# Конвертируйте все рукописи в директории
+python3 tools/batch_convert.py manuscripts/ -o output/
+
+# Создайте PDF для всех
+bash tools/generate_pdf.sh output/*.html
+```
+
+### Пример 3: С валидацией
+
+```bash
+# Проверьте качество
+python3 tools/validate_manuscript.py manuscripts/my-research.md
+
+# Если OK, конвертируйте
+python3 tools/manuscript_generator.py manuscripts/my-research.md
+```
+
+## 🎓 Обучающие материалы
+
+Система основана на анализе 8 ведущих медицинских публикаций:
+
+1. **Nature Medicine** - международный стандарт научной публикации
+2. **The Lancet** - классические медицинские журналы
+3. **BMC Surgery** - открытая медицинская литература
+4. **NCCN Guidelines** - клинические руководства для онкологии
+5. **JGCA Guidelines** - японские стандарты лечения рака желудка
+6. **Springer Medical Journals** - академические публикации
+
+**Результат:** Спецификации форматирования мирового класса в `training-materials/formatting-specifications.json`
+
+## 🔧 Требования
+
+### Обязательные
+
+- Python 3.7+
+- pip3
+
+### Рекомендуемые
+
+- wkhtmltopdf (для PDF)
+- git (для контроля версий)
+
+### Python пакеты
+
+```
+markdown
+Pygments
+```
+
+## 💡 Особенности
+
+### Профессиональная типографика
+
+- Шрифты: Times New Roman (body), Arial (headings)
+- Размеры: 12pt (body), 24pt/18pt/14pt (headings)
+- Межстрочный интервал: 1.5 (body), 1.2 (headings)
+
+### Цветовые схемы
+
+- **Conservative Academic** - традиционная
+- **Modern Medical** - современная (по умолчанию)
+- **NCCN Style** - стиль клинических руководств
+
+### Таблицы
+
+- Formal (Three-line) - для высокорейтинговых журналов
+- Grid - для клинических руководств
+- Modern - для веб-публикаций
+
+### Специальные блоки
+
+- **Key Points** - синий фон, голубая рамка
+- **Warning** - красный фон, темно-красная рамка
+- **Clinical Implications** - розовый фон, красная рамка
+- **Evidence Grading** - цвет по уровню доказательности
+
+## 🐛 Устранение неполадок
+
+### Проблема с кодировкой
+
+```bash
+# Проверьте кодировку
+file -i your-file.md
+
+# Конвертируйте в UTF-8
+iconv -f WINDOWS-1251 -t UTF-8 input.md > output.md
+```
+
+### PDF не генерируется
+
+```bash
+# Установите wkhtmltopdf
+sudo apt-get install wkhtmltopdf
+
+# Или используйте weasyprint
+pip install weasyprint
+```
+
+### Таблицы не отображаются
+
+```bash
+# Запустите валидатор
+python3 tools/validate_manuscript.py your-file.md
+```
+
+## 🤝 Вклад в проект
+
+Мы приветствуем вклад! См. [CONTRIBUTING.md](CONTRIBUTING.md) для деталей.
+
+### Как помочь
+
+- 🐛 Сообщайте об ошибках
+- 💡 Предлагайте новые функции
+- 📝 Улучшайте документацию
+- 🎨 Добавляйте новые шаблоны
+- 🌐 Переводите на другие языки
+
+## 📜 Лицензия
+
+Проект распространяется под лицензией MIT. См. [LICENSE](LICENSE) для деталей.
+
+## 👨‍⚕️ Автор
+
+**Сушков Сергей Валентинович**  
+д.мед.н., профессор, заместитель директора по научной работе  
+ГУ "Институт общей и неотложной хирургии им. В.Т.Зайцева НАМН Украины"
+
+## 🙏 Благодарности
+
+Благодарим авторов и редакторов ведущих медицинских журналов за установление высоких стандартов научной публикации, которые легли в основу этой системы.
+
+## 📞 Контакты
+
+- **Issues:** [GitHub Issues](https://github.com/Serg2206/medical-research-repoNS/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/Serg2206/medical-research-repoNS/discussions)
+
 ---
 
-## Examples
+## ⭐ Если проект полезен
 
-Explore the `notebooks/` directory for detailed examples, including:
-- **eda.ipynb**: Exploratory Data Analysis (EDA) with medical datasets.
-- **training_visualization.ipynb**: Training visualizations including loss curves and accuracy plots.
-- **fine_tuning.ipynb**: Fine-tuning pre-trained models for domain-specific tasks.
-- **model_evaluation.ipynb**: Model evaluation and performance analysis with real-world datasets.
+Поставьте звезду на GitHub! Это помогает другим найти проект.
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature-name`
-3. Commit changes: `git commit -m "Add new feature"`
-4. Push to your fork: `git push origin feature-name`
-5. Create a Pull Request.
-
-### Coding Standards and Testing Protocols
-- Follow PEP 8 coding style guidelines for Python scripts.
-- Ensure all new features or fixes include relevant unit tests.
-- Run tests locally using `pytest` before submitting a pull request:
-  ```bash
-  pytest tests/
-  ```
-- Document any changes in the `CHANGELOG.md` file.
+**Версия:** 1.0  
+**Статус:** Production Ready ✅  
+**Дата обновления:** Ноябрь 2025
 
 ---
 
-## License
+**Начните создавать профессиональные медицинские рукописи прямо сейчас!**
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-## Contact
-
-For questions, issues, or suggestions, feel free to contact the maintainer:
-
-- **Name**: Serg
-- **Email**: [example@domain.com](mailto:example@domain.com)
-
----
-
-Happy researching!
+👉 **[Быстрый старт](QUICK_START.md)**
