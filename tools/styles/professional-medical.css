@@ -1,0 +1,1282 @@
+/**
+ * Профессиональные стили для медицинских научных рукописей
+ * Основаны на анализе ведущих медицинских журналов
+ * 
+ * Источники:
+ * - NCCN Patient Guidelines 2025
+ * - JGCA Guidelines 2021
+ * - Nature, Lancet, BMC Surgery
+ * - Springer Medical Journals
+ * 
+ * Версия: 1.0
+ * Дата: 2025-11-10
+ */
+
+/* ============================================================================
+   CSS ПЕРЕМЕННЫЕ (Custom Properties)
+   ============================================================================ */
+
+:root {
+    /* Шрифты */
+    --font-family-serif: "Times New Roman", Georgia, serif;
+    --font-family-sans: Arial, Helvetica, sans-serif;
+    --font-family-mono: "Courier New", Consolas, monospace;
+    
+    /* Размеры шрифтов */
+    --font-size-base: 12pt;
+    --font-size-h1: 24pt;
+    --font-size-h2: 18pt;
+    --font-size-h3: 14pt;
+    --font-size-h4: 12pt;
+    --font-size-caption: 10pt;
+    --font-size-footnote: 9pt;
+    
+    /* Высота строки */
+    --line-height-base: 1.5;
+    --line-height-heading: 1.2;
+    --line-height-caption: 1.4;
+    
+    /* Цвета - Modern Medical Scheme */
+    --color-text-primary: #2C2C2C;
+    --color-text-secondary: #666666;
+    --color-heading: #1A5490;
+    --color-accent: #0066CC;
+    --color-background: #FFFFFF;
+    --color-background-secondary: #F5F5F5;
+    --color-border: #DDDDDD;
+    
+    /* Семантические цвета */
+    --color-success: #28A745;
+    --color-success-light: #D4EDDA;
+    --color-success-dark: #1E7E34;
+    --color-warning: #FFC107;
+    --color-warning-light: #FFF3CD;
+    --color-warning-dark: #856404;
+    --color-danger: #DC3545;
+    --color-danger-light: #F8D7DA;
+    --color-danger-dark: #721C24;
+    --color-info: #0066CC;
+    --color-info-light: #D1ECF1;
+    --color-info-dark: #004085;
+    
+    /* Отступы */
+    --spacing-xs: 3pt;
+    --spacing-sm: 6pt;
+    --spacing-md: 12pt;
+    --spacing-lg: 18pt;
+    --spacing-xl: 24pt;
+    
+    /* Границы */
+    --border-width-thin: 1pt;
+    --border-width-medium: 2pt;
+    --border-width-thick: 3pt;
+    
+    /* Тени */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ============================================================================
+   БАЗОВЫЕ СТИЛИ
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 1in;
+}
+
+/* ============================================================================
+   ТИПОГРАФИКА
+   ============================================================================ */
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+    color: var(--color-heading);
+    line-height: var(--line-height-heading);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    page-break-after: avoid;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    margin-top: 0;
+    border-bottom: var(--border-width-medium) solid var(--color-heading);
+    padding-bottom: var(--spacing-sm);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    border-bottom: var(--border-width-thin) solid var(--color-border);
+    padding-bottom: var(--spacing-xs);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+/* Параграфы */
+p {
+    margin-bottom: var(--spacing-sm);
+    text-align: justify;
+}
+
+/* Ссылки */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Выделение текста */
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* ============================================================================
+   ШАПКА РУКОПИСИ
+   ============================================================================ */
+
+.manuscript {
+    background: var(--color-background);
+}
+
+.manuscript-header {
+    text-align: center;
+    border-bottom: var(--border-width-medium) solid var(--color-heading);
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.manuscript-title {
+    font-size: var(--font-size-h1);
+    color: var(--color-heading);
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    border: none;
+}
+
+.manuscript-meta {
+    font-size: 11pt;
+    color: var(--color-text-secondary);
+}
+
+.manuscript-meta .author {
+    font-style: italic;
+    margin-bottom: var(--spacing-xs);
+}
+
+.manuscript-meta .date {
+    font-size: 10pt;
+}
+
+/* ============================================================================
+   ТАБЛИЦЫ
+   ============================================================================ */
+
+.table-container {
+    margin: var(--spacing-lg) 0;
+    page-break-inside: avoid;
+}
+
+.table-caption {
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    font-size: 11pt;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-md) 0;
+    font-size: 11pt;
+    line-height: 1.4;
+}
+
+/* Формальный стиль таблиц (Three-line) - для высокорейтинговых журналов */
+.table-formal {
+    border-top: var(--border-width-medium) solid #000000;
+    border-bottom: var(--border-width-medium) solid #000000;
+}
+
+.table-formal thead {
+    border-bottom: var(--border-width-thin) solid #000000;
+}
+
+.table-formal th,
+.table-formal td {
+    padding: 6pt 8pt;
+    text-align: left;
+}
+
+.table-formal thead th {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Современный стиль таблиц - для веб-версий */
+table thead {
+    background-color: #004B87;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+table thead th {
+    padding: 8pt;
+    text-align: center;
+    border: var(--border-width-thin) solid #FFFFFF;
+}
+
+table tbody tr {
+    border-bottom: var(--border-width-thin) solid var(--color-border);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #F5F5F5;
+}
+
+table tbody tr:hover {
+    background-color: #E6F2FF;
+}
+
+table tbody td {
+    padding: 6pt 8pt;
+    border: var(--border-width-thin) solid var(--color-border);
+}
+
+/* Выравнивание в ячейках */
+table td:first-child {
+    text-align: left;
+}
+
+table td.numeric {
+    text-align: right;
+    font-family: var(--font-family-mono);
+}
+
+/* Сноски таблиц */
+.table-footnote {
+    font-size: var(--font-size-footnote);
+    margin-top: var(--spacing-xs);
+    color: var(--color-text-secondary);
+}
+
+/* ============================================================================
+   РИСУНКИ И ИЗОБРАЖЕНИЯ
+   ============================================================================ */
+
+.figure-container {
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+    page-break-inside: avoid;
+}
+
+.figure-image {
+    max-width: 100%;
+    height: auto;
+    border: var(--border-width-thin) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.figure-caption {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+    text-align: left;
+    color: var(--color-text-secondary);
+}
+
+.figure-caption strong {
+    color: var(--color-text-primary);
+}
+
+/* ============================================================================
+   СПЕЦИАЛЬНЫЕ БЛОКИ КОНТЕНТА
+   ============================================================================ */
+
+.special-box {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+    page-break-inside: avoid;
+    border-radius: 4px;
+}
+
+.special-box .box-title {
+    font-weight: bold;
+    font-family: var(--font-family-sans);
+    margin-bottom: var(--spacing-sm);
+    font-size: 11pt;
+}
+
+.special-box .box-content {
+    font-size: 11pt;
+}
+
+.special-box .box-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Key Points Box */
+.key-points-box {
+    background-color: #E6F2FF;
+    border-left: 4pt solid var(--color-info);
+}
+
+.key-points-box .box-title {
+    color: #003366;
+}
+
+/* Warning Box */
+.warning-box {
+    background-color: var(--color-danger-light);
+    border-left: 4pt solid var(--color-danger);
+}
+
+.warning-box .box-title {
+    color: var(--color-danger-dark);
+}
+
+/* Clinical Implications Box */
+.clinical-implications-box {
+    background-color: #FFF5F5;
+    border: var(--border-width-medium) solid var(--color-danger);
+    padding: 15pt;
+}
+
+.clinical-implications-box .box-title {
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: var(--color-danger-dark);
+}
+
+/* Evidence Grading Box */
+.evidence-grading-box {
+    border: var(--border-width-thin) solid var(--color-border);
+    background-color: var(--color-background-secondary);
+}
+
+.evidence-grading-box[data-grade="high"] {
+    background-color: var(--color-success-light);
+    border-left: 4pt solid var(--color-success);
+}
+
+.evidence-grading-box[data-grade="moderate"] {
+    background-color: var(--color-warning-light);
+    border-left: 4pt solid var(--color-warning);
+}
+
+.evidence-grading-box[data-grade="low"] {
+    background-color: #FFE5CC;
+    border-left: 4pt solid #FD7E14;
+}
+
+.evidence-grading-box[data-grade="very_low"] {
+    background-color: var(--color-danger-light);
+    border-left: 4pt solid var(--color-danger);
+}
+
+.evidence-symbol {
+    font-size: 14pt;
+    margin-right: var(--spacing-xs);
+}
+
+/* ============================================================================
+   СПИСКИ
+   ============================================================================ */
+
+ul, ol {
+    margin: var(--spacing-md) 0;
+    padding-left: 1.5em;
+}
+
+ul li, ol li {
+    margin-bottom: var(--spacing-xs);
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+/* ============================================================================
+   ЦИТАТЫ И БЛОКИ КОДА
+   ============================================================================ */
+
+blockquote {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+    border-left: 4pt solid var(--color-border);
+    background-color: var(--color-background-secondary);
+    font-style: italic;
+}
+
+code {
+    font-family: var(--font-family-mono);
+    font-size: 10pt;
+    background-color: var(--color-background-secondary);
+    padding: 2pt 4pt;
+    border-radius: 2px;
+}
+
+pre {
+    background-color: var(--color-background-secondary);
+    padding: var(--spacing-md);
+    border: var(--border-width-thin) solid var(--color-border);
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ============================================================================
+   БИБЛИОГРАФИЧЕСКИЕ ССЫЛКИ
+   ============================================================================ */
+
+.references {
+    margin-top: var(--spacing-xl);
+    border-top: var(--border-width-medium) solid var(--color-heading);
+    padding-top: var(--spacing-lg);
+}
+
+.references h2 {
+    border-bottom: none;
+}
+
+.reference-item {
+    margin-bottom: var(--spacing-sm);
+    font-size: 10pt;
+    line-height: 1.3;
+    text-indent: -0.5in;
+    padding-left: 0.5in;
+}
+
+/* Внутритекстовые цитаты (Vancouver style) */
+.citation {
+    color: var(--color-accent);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.citation:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================================
+   ПЕЧАТЬ
+   ============================================================================ */
+
+@media print {
+    body {
+        font-size: 11pt;
+        padding: 0;
+        max-width: none;
+    }
+    
+    .manuscript-header,
+    .special-box,
+    .table-container,
+    .figure-container {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+    
+    /* Показываем URL ссылок при печати */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: var(--color-text-secondary);
+    }
+    
+    /* Убираем цветной фон при печати */
+    .special-box {
+        border: var(--border-width-thin) solid #000000;
+        background-color: transparent !important;
+    }
+}
+
+/* ============================================================================
+   АДАПТИВНОСТЬ ДЛЯ ВЕБ-ВЕРСИЙ
+   ============================================================================ */
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 0.5in;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+    
+    h3 {
+        font-size: 14pt;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0.25in;
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 18pt;
+    }
+    
+    h2 {
+        font-size: 15pt;
+    }
+}
+
+/* ============================================================================
+   ДОСТУПНОСТЬ
+   ============================================================================ */
+
+/* Высокий контраст для улучшения читаемости */
+@media (prefers-contrast: high) {
+    :root {
+        --color-text-primary: #000000;
+        --color-background: #FFFFFF;
+        --color-border: #000000;
+    }
+}
+
+/* Уменьшенная анимация для пользователей с вестибулярными расстройствами */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Фокус для клавиатурной навигации */
+:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ============================================================================
+   УТИЛИТАРНЫЕ КЛАССЫ
+   ============================================================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.no-break {
+    page-break-inside: avoid;
+}
+
+
+
+/* ============================================================================
+   VISUAL COMPONENTS STYLES - Medical Manuscript System
+   Added: November 10, 2025
+   Purpose: Rich visual content for medical publications
+   ============================================================================ */
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.image-gallery[data-columns="2"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-gallery[data-columns="4"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item.lightbox-enabled {
+    cursor: pointer;
+}
+
+.gallery-caption {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.gallery-main-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+    transition: opacity 0.3s;
+}
+
+.lightbox-close:hover {
+    opacity: 0.7;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.lightbox-prev {
+    left: -80px;
+}
+
+.lightbox-next {
+    right: -80px;
+}
+
+/* Multi-Panel Figure Styles */
+.multi-panel-figure {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.panel-grid {
+    display: grid;
+    gap: 15px;
+    margin: 1rem 0;
+}
+
+.panel-grid[data-rows="2"][data-cols="2"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.panel-grid[data-rows="2"][data-cols="3"] {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.panel-grid[data-rows="3"][data-cols="2"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.panel-grid[data-rows="3"][data-cols="3"] {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.panel-grid[data-rows="1"] {
+    grid-template-rows: 1fr;
+}
+
+.panel-grid[data-rows="2"][data-cols="4"] {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.panel-item {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.panel-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 4px 10px;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.panel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.panel-caption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+}
+
+.multi-panel-figure figcaption {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Annotated Image Styles */
+.annotated-image-container {
+    margin: 2rem 0;
+    max-width: 100%;
+}
+
+.annotated-image-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.base-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.annotation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.annotation {
+    pointer-events: none;
+}
+
+.annotation-text {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.annotated-image-caption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Comparison Slider Styles */
+.comparison-slider-container {
+    margin: 2rem 0;
+    max-width: 100%;
+}
+
+.comparison-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comparison-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.comparison-before-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.comparison-before {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comparison-slider-handle {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    cursor: ew-resize;
+    z-index: 100;
+}
+
+.slider-line {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.comparison-label {
+    position: absolute;
+    top: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.comparison-label-before {
+    left: 10px;
+}
+
+.comparison-label-after {
+    right: 10px;
+}
+
+.comparison-caption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Procedure Steps Styles */
+.procedure-container {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.procedure-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.procedure-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.procedure-container.horizontal-layout .procedure-steps {
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.procedure-container.grid-layout .procedure-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.procedure-step {
+    position: relative;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.step-number {
+    background: #3498db;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.step-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+.step-caption {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Surgical Photo Panel Styles */
+.surgical-photo-panel {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.panel-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #856404;
+}
+
+.photo-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.photo-grid[data-columns="1"] {
+    grid-template-columns: 1fr;
+}
+
+.photo-grid[data-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+.surgical-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-caption {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: #555;
+    background: #f9f9f9;
+}
+
+/* Responsive Design for Visual Components */
+@media (max-width: 1200px) {
+    .image-gallery[data-columns="4"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .panel-grid[data-cols="4"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .image-gallery[data-columns="4"],
+    .image-gallery[data-columns="3"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .panel-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+    
+    .lightbox-nav {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    .procedure-container.horizontal-layout .procedure-steps {
+        flex-direction: column;
+    }
+    
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .comparison-slider-handle {
+        width: 2px;
+    }
+    
+    .slider-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+/* Print Styles for Visual Components */
+@media print {
+    .lightbox-overlay {
+        display: none !important;
+    }
+    
+    .comparison-slider-handle {
+        display: none;
+    }
+    
+    .comparison-before-wrapper {
+        position: relative;
+        width: 48%;
+        display: inline-block;
+    }
+    
+    .comparison-slider-wrapper::after {
+        content: " ";
+        display: inline-block;
+        width: 48%;
+    }
+    
+    .gallery-item:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+}
+
+/* Accessibility Enhancements */
+.gallery-item:focus,
+.panel-item:focus,
+.procedure-step:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.lightbox-close:focus,
+.lightbox-nav:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .panel-label,
+    .step-number {
+        border: 2px solid #fff;
+    }
+    
+    .comparison-label {
+        border: 1px solid #fff;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-item,
+    .lightbox-close,
+    .lightbox-nav {
+        transition: none;
+    }
+    
+    .gallery-item:hover {
+        transform: none;
+    }
+}

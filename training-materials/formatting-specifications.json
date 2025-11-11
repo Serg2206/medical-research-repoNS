@@ -1,0 +1,595 @@
+{
+  "metadata": {
+    "title": "Medical Manuscript Formatting Specifications",
+    "version": "1.0",
+    "date": "2025-11-10",
+    "purpose": "Technical specifications for manuscript generation tool",
+    "based_on": [
+      "NCCN Patient Guidelines 2025",
+      "JGCA Guidelines 2021",
+      "BMC Surgery publications",
+      "Springer medical journals"
+    ]
+  },
+  "document_settings": {
+    "page": {
+      "formats": {
+        "a4": {
+          "width_mm": 210,
+          "height_mm": 297,
+          "width_in": 8.27,
+          "height_in": 11.69
+        },
+        "letter": {
+          "width_mm": 215.9,
+          "height_mm": 279.4,
+          "width_in": 8.5,
+          "height_in": 11
+        }
+      },
+      "margins": {
+        "academic_paper": {
+          "top_cm": 2.54,
+          "bottom_cm": 2.54,
+          "left_cm": 2.54,
+          "right_cm": 2.54
+        },
+        "book_monograph": {
+          "top_cm": 2.54,
+          "bottom_cm": 2.54,
+          "inner_cm": 3.18,
+          "outer_cm": 2.54
+        }
+      },
+      "orientation": "portrait"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "serif": {
+        "families": [
+          "Times New Roman",
+          "Georgia",
+          "Garamond"
+        ],
+        "usage": "Body text, academic papers",
+        "fallback": "serif"
+      },
+      "sans_serif": {
+        "families": [
+          "Arial",
+          "Helvetica",
+          "Open Sans",
+          "Roboto"
+        ],
+        "usage": "Headings, patient materials, modern documents",
+        "fallback": "sans-serif"
+      },
+      "monospace": {
+        "families": [
+          "Courier New",
+          "Consolas",
+          "Source Code Pro"
+        ],
+        "usage": "Code blocks, technical content",
+        "fallback": "monospace"
+      }
+    },
+    "sizes": {
+      "body_text": {
+        "print_pt": 11,
+        "pdf_pt": 12,
+        "web_px": 16
+      },
+      "headings": {
+        "h1": {
+          "pt": 24,
+          "scale": 2.0
+        },
+        "h2": {
+          "pt": 18,
+          "scale": 1.5
+        },
+        "h3": {
+          "pt": 14,
+          "scale": 1.17
+        },
+        "h4": {
+          "pt": 12,
+          "scale": 1.0
+        },
+        "h5": {
+          "pt": 11,
+          "scale": 0.92
+        },
+        "h6": {
+          "pt": 10,
+          "scale": 0.83
+        }
+      },
+      "captions": {
+        "table_pt": 11,
+        "figure_pt": 10,
+        "footnote_pt": 9
+      }
+    },
+    "line_height": {
+      "body_text": 1.5,
+      "headings": 1.2,
+      "captions": 1.3,
+      "tables": 1.4,
+      "references": 1.15
+    },
+    "spacing": {
+      "paragraph": {
+        "indent_first_line_in": 0.5,
+        "space_after_pt": 6,
+        "space_between_pt": 0
+      },
+      "headings": {
+        "h2": {
+          "before_pt": 24,
+          "after_pt": 12
+        },
+        "h3": {
+          "before_pt": 18,
+          "after_pt": 9
+        },
+        "h4": {
+          "before_pt": 12,
+          "after_pt": 6
+        }
+      }
+    }
+  },
+  "color_schemes": {
+    "conservative_academic": {
+      "name": "Conservative Academic",
+      "usage": "Traditional journals, formal publications",
+      "colors": {
+        "text_primary": "#000000",
+        "text_secondary": "#333333",
+        "heading": "#003366",
+        "accent": "#003366",
+        "background": "#FFFFFF",
+        "border": "#CCCCCC"
+      }
+    },
+    "modern_medical": {
+      "name": "Modern Medical",
+      "usage": "Contemporary publications, web versions",
+      "colors": {
+        "text_primary": "#2C2C2C",
+        "text_secondary": "#666666",
+        "heading": "#1A5490",
+        "accent": "#0066CC",
+        "background": "#FFFFFF",
+        "background_secondary": "#F5F5F5",
+        "border": "#DDDDDD",
+        "success": "#28A745",
+        "warning": "#FFC107",
+        "danger": "#DC3545",
+        "info": "#17A2B8"
+      }
+    },
+    "nccn_style": {
+      "name": "NCCN Guidelines Style",
+      "usage": "Clinical guidelines, patient materials",
+      "colors": {
+        "primary": "#004B87",
+        "secondary": "#7BAFD4",
+        "accent_light": "#E6F2FF",
+        "text": "#000000",
+        "table_header_bg": "#004B87",
+        "table_header_text": "#FFFFFF"
+      }
+    },
+    "semantic_colors": {
+      "positive": {
+        "main": "#28A745",
+        "light": "#D4EDDA",
+        "dark": "#1E7E34"
+      },
+      "warning": {
+        "main": "#FFC107",
+        "light": "#FFF3CD",
+        "dark": "#856404"
+      },
+      "danger": {
+        "main": "#DC3545",
+        "light": "#F8D7DA",
+        "dark": "#721C24"
+      },
+      "info": {
+        "main": "#0066CC",
+        "light": "#D1ECF1",
+        "dark": "#004085"
+      }
+    }
+  },
+  "tables": {
+    "styles": {
+      "formal_three_line": {
+        "name": "Formal (Three-line)",
+        "usage": "High-impact journals (Nature, Science, Lancet)",
+        "borders": {
+          "top": {
+            "width_pt": 2,
+            "color": "#000000",
+            "style": "solid"
+          },
+          "header_bottom": {
+            "width_pt": 1,
+            "color": "#000000",
+            "style": "solid"
+          },
+          "bottom": {
+            "width_pt": 2,
+            "color": "#000000",
+            "style": "solid"
+          },
+          "vertical": null,
+          "internal_horizontal": null
+        }
+      },
+      "grid": {
+        "name": "Grid",
+        "usage": "Clinical guidelines, patient materials",
+        "borders": {
+          "all": {
+            "width_pt": 1,
+            "color": "#CCCCCC",
+            "style": "solid"
+          }
+        },
+        "zebra_striping": true
+      },
+      "modern": {
+        "name": "Modern",
+        "usage": "Web publications, interactive documents",
+        "header": {
+          "background": "#004B87",
+          "text_color": "#FFFFFF",
+          "font_weight": "bold"
+        },
+        "borders": {
+          "internal_horizontal": {
+            "width_pt": 1,
+            "color": "#EEEEEE",
+            "style": "solid"
+          }
+        },
+        "zebra_striping": true,
+        "hover_effect": true,
+        "box_shadow": "0 2px 4px rgba(0,0,0,0.1)"
+      }
+    },
+    "cell_padding": {
+      "default_pt": 6,
+      "header_pt": 8,
+      "compact_pt": 4
+    },
+    "alignment": {
+      "text_columns": "left",
+      "numeric_columns": "right",
+      "headers": "center",
+      "first_column": "left"
+    },
+    "caption": {
+      "position": "top",
+      "format": "**Table {n}.** {title}",
+      "font_weight": "bold",
+      "margin_bottom_pt": 6
+    },
+    "footnotes": {
+      "font_size_pt": 9,
+      "margin_top_pt": 6,
+      "symbols": [
+        "*",
+        "†",
+        "‡",
+        "§",
+        "¶",
+        "**"
+      ]
+    }
+  },
+  "figures": {
+    "image_requirements": {
+      "resolution": {
+        "print_dpi": 300,
+        "print_line_art_dpi": 600,
+        "web_dpi": 96
+      },
+      "formats": {
+        "print": [
+          "TIFF",
+          "EPS",
+          "PDF"
+        ],
+        "web": [
+          "PNG",
+          "JPEG",
+          "SVG"
+        ]
+      },
+      "color_mode": {
+        "print": "CMYK",
+        "web": "RGB"
+      }
+    },
+    "dimensions": {
+      "single_column_cm": 8.5,
+      "1_5_column_cm": 12.75,
+      "double_column_cm": 17.5,
+      "full_page_cm": 15
+    },
+    "caption": {
+      "position": "bottom",
+      "format": "Figure {n}. {title}. {description}",
+      "font_size_pt": 10,
+      "line_height": 1.4,
+      "margin_top_pt": 6
+    },
+    "panel_labels": {
+      "style": "bold uppercase",
+      "font_size_pt": 14,
+      "position": "top-left",
+      "padding_pt": 8
+    }
+  },
+  "charts_graphs": {
+    "color_palettes": {
+      "main_5_colors": [
+        "#1F77B4",
+        "#FF7F0E",
+        "#2CA02C",
+        "#D62728",
+        "#9467BD"
+      ],
+      "extended_10_colors": [
+        "#1F77B4",
+        "#FF7F0E",
+        "#2CA02C",
+        "#D62728",
+        "#9467BD",
+        "#8C564B",
+        "#E377C2",
+        "#7F7F7F",
+        "#BCBD22",
+        "#17BECF"
+      ],
+      "kaplan_meier": {
+        "group_1": "#0066CC",
+        "group_2": "#CC0000",
+        "censored_mark": "vertical_line",
+        "confidence_interval_alpha": 0.2
+      }
+    },
+    "axes": {
+      "spine_width_pt": 1,
+      "tick_width_pt": 1,
+      "label_font_size_pt": 11,
+      "tick_label_size_pt": 10,
+      "visible_spines": [
+        "left",
+        "bottom"
+      ],
+      "hidden_spines": [
+        "top",
+        "right"
+      ]
+    },
+    "grid": {
+      "enabled": true,
+      "axis": "y",
+      "linestyle": "dashed",
+      "linewidth_pt": 0.5,
+      "color": "#DDDDDD",
+      "alpha": 0.7,
+      "zorder": 0
+    },
+    "legend": {
+      "location": "best",
+      "frameon": true,
+      "fancybox": false,
+      "shadow": false,
+      "font_size_pt": 10,
+      "title_font_size_pt": 11
+    }
+  },
+  "lists": {
+    "bulleted": {
+      "level_1_marker": "•",
+      "level_2_marker": "○",
+      "level_3_marker": "·",
+      "indent_per_level_in": 0.5,
+      "spacing_after_item_pt": 3
+    },
+    "numbered": {
+      "level_1_format": "1.",
+      "level_2_format": "1.1.",
+      "level_3_format": "1.1.1.",
+      "indent_per_level_in": 0.5
+    }
+  },
+  "citations": {
+    "vancouver_style": {
+      "in_text_format": "[{n}]",
+      "multiple_consecutive": "[{start}-{end}]",
+      "multiple_nonconsecutive": "[{n1}, {n2}, {n3}]",
+      "superscript": false
+    },
+    "reference_list": {
+      "format": "numbered",
+      "font_size_pt": 10,
+      "line_height": 1.3,
+      "hanging_indent_in": 0.5,
+      "spacing_between_pt": 6
+    }
+  },
+  "special_elements": {
+    "abstract": {
+      "max_words": 300,
+      "structured": true,
+      "sections": [
+        "Background",
+        "Methods",
+        "Results",
+        "Conclusion"
+      ],
+      "font_size_pt": 11,
+      "margin_vertical_pt": 18
+    },
+    "key_points_box": {
+      "background_color": "#E6F2FF",
+      "border_left": {
+        "width_pt": 4,
+        "color": "#0066CC"
+      },
+      "padding_pt": 12,
+      "margin_vertical_pt": 12,
+      "title_font_weight": "bold",
+      "title_color": "#003366"
+    },
+    "warning_box": {
+      "background_color": "#F8D7DA",
+      "border_left": {
+        "width_pt": 4,
+        "color": "#DC3545"
+      },
+      "padding_pt": 12,
+      "margin_vertical_pt": 12,
+      "title_font_weight": "bold",
+      "title_color": "#721C24"
+    },
+    "clinical_implications": {
+      "background_color": "#FFF5F5",
+      "border": {
+        "width_pt": 2,
+        "color": "#DC3545"
+      },
+      "padding_pt": 15,
+      "margin_vertical_pt": 18,
+      "title_transform": "uppercase",
+      "title_letter_spacing_pt": 1
+    }
+  },
+  "evidence_grading": {
+    "grade_system": {
+      "high": {
+        "symbol": "⊕⊕⊕⊕",
+        "color": "#28A745",
+        "background": "#D4EDDA"
+      },
+      "moderate": {
+        "symbol": "⊕⊕⊕○",
+        "color": "#FFC107",
+        "background": "#FFF3CD"
+      },
+      "low": {
+        "symbol": "⊕⊕○○",
+        "color": "#FD7E14",
+        "background": "#FFE5CC"
+      },
+      "very_low": {
+        "symbol": "⊕○○○",
+        "color": "#DC3545",
+        "background": "#F8D7DA"
+      }
+    }
+  },
+  "css_variables": {
+    "description": "CSS custom properties for easy theming",
+    "variables": {
+      "--font-family-serif": "\"Times New Roman\", Georgia, serif",
+      "--font-family-sans": "Arial, Helvetica, sans-serif",
+      "--font-size-base": "11pt",
+      "--line-height-base": "1.5",
+      "--color-primary": "#003366",
+      "--color-accent": "#0066CC",
+      "--color-text": "#2C2C2C",
+      "--color-text-light": "#666666",
+      "--color-background": "#FFFFFF",
+      "--color-background-alt": "#F5F5F5",
+      "--color-border": "#DDDDDD",
+      "--color-success": "#28A745",
+      "--color-success-light": "#D4EDDA",
+      "--color-warning": "#FFC107",
+      "--color-warning-light": "#FFF3CD",
+      "--color-danger": "#DC3545",
+      "--color-danger-light": "#F8D7DA",
+      "--spacing-xs": "3pt",
+      "--spacing-sm": "6pt",
+      "--spacing-md": "12pt",
+      "--spacing-lg": "18pt",
+      "--spacing-xl": "24pt",
+      "--border-width-thin": "1pt",
+      "--border-width-medium": "2pt",
+      "--border-width-thick": "3pt",
+      "--shadow-sm": "0 2px 4px rgba(0,0,0,0.1)",
+      "--shadow-md": "0 4px 8px rgba(0,0,0,0.15)",
+      "--heading-h1-size": "24pt",
+      "--heading-h2-size": "18pt",
+      "--heading-h3-size": "14pt",
+      "--heading-h4-size": "12pt"
+    }
+  },
+  "responsive_breakpoints": {
+    "description": "Breakpoints for responsive web versions",
+    "breakpoints": {
+      "mobile": "600px",
+      "tablet": "900px",
+      "desktop": "1200px",
+      "wide": "1800px"
+    },
+    "mobile_adjustments": {
+      "font_size_increase_percent": 10,
+      "table_overflow": "horizontal_scroll",
+      "multi_column_to_single": true
+    }
+  },
+  "print_specifications": {
+    "page_break_rules": {
+      "avoid_after_heading": true,
+      "avoid_inside_table": true,
+      "avoid_inside_figure": true,
+      "orphans": 3,
+      "widows": 3
+    },
+    "link_handling": {
+      "show_urls": false,
+      "internal_links_color": "inherit"
+    }
+  },
+  "accessibility": {
+    "color_contrast": {
+      "min_ratio_text": 4.5,
+      "min_ratio_large_text": 3,
+      "min_ratio_ui": 3
+    },
+    "colorblind_safe": {
+      "avoid_red_green_only": true,
+      "add_patterns_to_colors": true,
+      "use_accessible_palette": true
+    },
+    "alt_text": {
+      "required_for_figures": true,
+      "max_length_chars": 125,
+      "describe_medical_relevance": true
+    }
+  },
+  "file_naming": {
+    "conventions": {
+      "manuscript": "{title_slug}_{version}_{date}.html",
+      "figures": "figure_{number}_{description_slug}.png",
+      "tables": "table_{number}_{description_slug}.html",
+      "supplementary": "supplementary_{type}_{number}.pdf"
+    }
+  },
+  "version_control": {
+    "versioning_scheme": "semantic_versioning",
+    "format": "v{major}.{minor}.{patch}",
+    "changelog_required": true
+  }
+}

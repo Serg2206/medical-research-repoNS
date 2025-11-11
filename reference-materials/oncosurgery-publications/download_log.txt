@@ -1,0 +1,453 @@
+=== Oncosurgery Publications Download Session ===
+Date: Mon Nov 10 22:03:55 UTC 2025
+================================================
+
+Downloading Priority #1: JGCA Guidelines 2021...
+--2025-11-10 22:04:10--  https://www.jgca.jp/wp-content/uploads/2023/08/E-gudeline.pdf
+Resolving www.jgca.jp (www.jgca.jp)... 219.99.164.115
+Connecting to www.jgca.jp (www.jgca.jp)|219.99.164.115|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 74261 (73K) [application/pdf]
+Saving to: ‘JGCA_Guidelines_2021_6th_Edition.pdf’
+
+     0K .......... .......... .......... .......... .......... 68%  190K 0s
+    50K .......... .......... ..                              100% 65.0M=0.3s
+
+2025-11-10 22:04:11 (275 KB/s) - ‘JGCA_Guidelines_2021_6th_Edition.pdf’ saved [74261/74261]
+
+✓ JGCA Guidelines downloaded successfully: 74261 bytes
+JGCA_Guidelines_2021_6th_Edition.pdf: PDF document, version 1.3, 7 pages
+
+Downloading Priority #2: Double-Tract Reconstruction Review...
+--2025-11-10 22:04:21--  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8226393/pdf/
+Resolving www.ncbi.nlm.nih.gov (www.ncbi.nlm.nih.gov)... 130.14.29.110, 2607:f220:41e:4290::110
+Connecting to www.ncbi.nlm.nih.gov (www.ncbi.nlm.nih.gov)|130.14.29.110|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://pmc.ncbi.nlm.nih.gov/articles/PMC8226393/pdf/ [following]
+--2025-11-10 22:04:21--  https://pmc.ncbi.nlm.nih.gov/articles/PMC8226393/pdf/
+Resolving pmc.ncbi.nlm.nih.gov (pmc.ncbi.nlm.nih.gov)... 34.107.134.59, 2600:1901:0:c831::
+Connecting to pmc.ncbi.nlm.nih.gov (pmc.ncbi.nlm.nih.gov)|34.107.134.59|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: /articles/PMC8226393/pdf/main.pdf [following]
+--2025-11-10 22:04:21--  https://pmc.ncbi.nlm.nih.gov/articles/PMC8226393/pdf/main.pdf
+Reusing existing connection to pmc.ncbi.nlm.nih.gov:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1285 (1.3K) [text/html]
+Saving to: ‘Double_Tract_Reconstruction_Systematic_Review_PMC8226393.pdf’
+
+     0K .                                                     100% 43.4M=0s
+
+2025-11-10 22:04:21 (43.4 MB/s) - ‘Double_Tract_Reconstruction_Systematic_Review_PMC8226393.pdf’ saved [1285/1285]
+
+✓ Double-Tract Reconstruction Review downloaded: 1285 bytes
+Double_Tract_Reconstruction_Systematic_Review_PMC8226393.pdf: HTML document, ASCII text
+
+Attempting alternative download for Double-Tract Reconstruction...
+--2025-11-10 22:04:32--  https://www.sciencedirect.com/science/article/pii/S1743919121001370/pdfft?isDTMRedir=true&download=true
+Resolving www.sciencedirect.com (www.sciencedirect.com)... 203.22.241.9, 203.22.241.10, 203.22.241.11, ...
+Connecting to www.sciencedirect.com (www.sciencedirect.com)|203.22.241.9|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-11-10 22:04:32 ERROR 403: Forbidden.
+
+✓ Downloaded: 0 bytes
+Double_Tract_Reconstruction_IJS_2021.pdf: empty
+⚠ Not a PDF, might be HTML redirect
+
+Downloading Priority #3: NCCN Patient Guidelines...
+--2025-11-10 22:04:40--  https://www.nccn.org/patients/guidelines/content/PDF/stomach-patient.pdf
+Resolving www.nccn.org (www.nccn.org)... 172.66.158.135, 104.20.38.117, 2606:4700:10::6814:2675, ...
+Connecting to www.nccn.org (www.nccn.org)|172.66.158.135|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4674651 (4.5M) [application/pdf]
+Saving to: ‘NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf’
+
+     0K .......... .......... .......... .......... ..........  1%  321K 14s
+    50K .......... .......... .......... .......... ..........  2%  639K 10s
+   100K .......... .......... .......... .......... ..........  3%  603K 9s
+   150K .......... .......... .......... .......... ..........  4%  636K 9s
+   200K .......... .......... .......... .......... ..........  5%  658K 8s
+   250K .......... .......... .......... .......... ..........  6%  547K 8s
+   300K .......... .......... .......... .......... ..........  7%  769K 8s
+   350K .......... .......... .......... .......... ..........  8%  641K 7s
+   400K .......... .......... .......... .......... ..........  9% 17.1M 6s
+   450K .......... .......... .......... .......... .......... 10%  623K 6s
+   500K .......... .......... .......... .......... .......... 12%  226M 6s
+   550K .......... .......... .......... .......... .......... 13%  641K 6s
+   600K .......... .......... .......... .......... .......... 14% 24.6M 5s
+   650K .......... .......... .......... .......... .......... 15%  651K 5s
+   700K .......... .......... .......... .......... .......... 16% 41.5M 5s
+   750K .......... .......... .......... .......... .......... 17%  570K 5s
+   800K .......... .......... .......... .......... .......... 18%  189M 5s
+   850K .......... .......... .......... .......... .......... 19% 89.5M 4s
+   900K .......... .......... .......... .......... .......... 20%  642K 4s
+   950K .......... .......... .......... .......... .......... 21% 21.3M 4s
+  1000K .......... .......... .......... .......... .......... 23% 23.6M 4s
+  1050K .......... .......... .......... .......... .......... 24%  665K 4s
+  1100K .......... .......... .......... .......... .......... 25% 32.7M 4s
+  1150K .......... .......... .......... .......... .......... 26%  200M 3s
+  1200K .......... .......... .......... .......... .......... 27%  647K 3s
+  1250K .......... .......... .......... .......... .......... 28% 3.45M 3s
+  1300K .......... .......... .......... .......... .......... 29% 12.2M 3s
+  1350K .......... .......... .......... .......... .......... 30%  841K 3s
+  1400K .......... .......... .......... .......... .......... 31% 17.2M 3s
+  1450K .......... .......... .......... .......... .......... 32% 4.23M 3s
+  1500K .......... .......... .......... .......... .......... 33% 7.61M 3s
+  1550K .......... .......... .......... .......... .......... 35%  809K 3s
+  1600K .......... .......... .......... .......... .......... 36%  141M 3s
+  1650K .......... .......... .......... .......... .......... 37% 3.01M 2s
+  1700K .......... .......... .......... .......... .......... 38% 34.4M 2s
+  1750K .......... .......... .......... .......... .......... 39%  820K 2s
+  1800K .......... .......... .......... .......... .......... 40% 5.60M 2s
+  1850K .......... .......... .......... .......... .......... 41%  212M 2s
+  1900K .......... .......... .......... .......... .......... 42% 6.65M 2s
+  1950K .......... .......... .......... .......... .......... 43% 6.83M 2s
+  2000K .......... .......... .......... .......... .......... 44%  774K 2s
+  2050K .......... .......... .......... .......... .......... 46% 3.53M 2s
+  2100K .......... .......... .......... .......... .......... 47% 45.2M 2s
+  2150K .......... .......... .......... .......... .......... 48% 24.5M 2s
+  2200K .......... .......... .......... .......... .......... 49%  232M 2s
+  2250K .......... .......... .......... .......... .......... 50%  646K 2s
+  2300K .......... .......... .......... .......... .......... 51% 12.4M 2s
+  2350K .......... .......... .......... .......... .......... 52% 42.4M 2s
+  2400K .......... .......... .......... .......... .......... 53% 62.0M 1s
+  2450K .......... .......... .......... .......... .......... 54% 61.9M 1s
+  2500K .......... .......... .......... .......... .......... 55%  632K 1s
+  2550K .......... .......... .......... .......... .......... 56% 14.1M 1s
+  2600K .......... .......... .......... .......... .......... 58% 40.7M 1s
+  2650K .......... .......... .......... .......... .......... 59%  215M 1s
+  2700K .......... .......... .......... .......... .......... 60% 38.5M 1s
+  2750K .......... .......... .......... .......... .......... 61%  657K 1s
+  2800K .......... .......... .......... .......... .......... 62% 7.40M 1s
+  2850K .......... .......... .......... .......... .......... 63%  337M 1s
+  2900K .......... .......... .......... .......... .......... 64%  151M 1s
+  2950K .......... .......... .......... .......... .......... 65% 32.2M 1s
+  3000K .......... .......... .......... .......... .......... 66%  659K 1s
+  3050K .......... .......... .......... .......... .......... 67% 9.11M 1s
+  3100K .......... .......... .......... .......... .......... 69% 53.2M 1s
+  3150K .......... .......... .......... .......... .......... 70% 71.4M 1s
+  3200K .......... .......... .......... .......... .......... 71% 33.5M 1s
+  3250K .......... .......... .......... .......... .......... 72% 1.89M 1s
+  3300K .......... .......... .......... .......... .......... 73%  776K 1s
+  3350K .......... .......... .......... .......... .......... 74%  130M 1s
+  3400K .......... .......... .......... .......... .......... 75% 36.6M 1s
+  3450K .......... .......... .......... .......... .......... 76% 31.4M 1s
+  3500K .......... .......... .......... .......... .......... 77%  236M 1s
+  3550K .......... .......... .......... .......... .......... 78%  640K 1s
+  3600K .......... .......... .......... .......... .......... 79% 15.3M 1s
+  3650K .......... .......... .......... .......... .......... 81%  428M 0s
+  3700K .......... .......... .......... .......... .......... 82%  441M 0s
+  3750K .......... .......... .......... .......... .......... 83% 69.6M 0s
+  3800K .......... .......... .......... .......... .......... 84% 8.44M 0s
+  3850K .......... .......... .......... .......... .......... 85%  700K 0s
+  3900K .......... .......... .......... .......... .......... 86% 32.9M 0s
+  3950K .......... .......... .......... .......... .......... 87% 25.9M 0s
+  4000K .......... .......... .......... .......... .......... 88%  372M 0s
+  4050K .......... .......... .......... .......... .......... 89% 77.2M 0s
+  4100K .......... .......... .......... .......... .......... 90% 11.7M 0s
+  4150K .......... .......... .......... .......... .......... 92%  726K 0s
+  4200K .......... .......... .......... .......... .......... 93% 17.3M 0s
+  4250K .......... .......... .......... .......... .......... 94% 50.1M 0s
+  4300K .......... .......... .......... .......... .......... 95% 37.3M 0s
+  4350K .......... .......... .......... .......... .......... 96% 19.7M 0s
+  4400K .......... .......... .......... .......... .......... 97% 55.4M 0s
+  4450K .......... .......... .......... .......... .......... 98%  677K 0s
+  4500K .......... .......... .......... .......... .......... 99%  133M 0s
+  4550K .......... .....                                      100% 16.3M=2.4s
+
+2025-11-10 22:04:43 (1.88 MB/s) - ‘NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf’ saved [4674651/4674651]
+
+✓ NCCN Guidelines downloaded: 4674651 bytes
+NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf: PDF document, version 1.7, 105 pages
+
+Downloading Priority #4: Japanese Classification of Gastric Carcinoma...
+--2025-11-10 22:04:53--  https://link.springer.com/content/pdf/10.1007/s10120-016-0622-4.pdf
+Resolving link.springer.com (link.springer.com)... 146.75.40.95
+Connecting to link.springer.com (link.springer.com)|146.75.40.95|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs10120-016-0622-4.pdf [following]
+--2025-11-10 22:04:53--  https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs10120-016-0622-4.pdf
+Resolving idp.springer.com (idp.springer.com)... 146.75.40.95
+Connecting to idp.springer.com (idp.springer.com)|146.75.40.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://link.springer.com/content/pdf/10.1007/s10120-016-0622-4.pdf [following]
+--2025-11-10 22:04:53--  https://link.springer.com/content/pdf/10.1007/s10120-016-0622-4.pdf
+Connecting to link.springer.com (link.springer.com)|146.75.40.95|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1409805 (1.3M) [application/pdf]
+Saving to: ‘Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf’
+
+     0K .......... .......... .......... .......... ..........  3% 4.92M 0s
+    50K .......... .......... .......... .......... ..........  7% 15.9M 0s
+   100K .......... .......... .......... .......... .......... 10% 9.38M 0s
+   150K .......... .......... .......... .......... .......... 14% 23.1M 0s
+   200K .......... .......... .......... .......... .......... 18% 33.4M 0s
+   250K .......... .......... .......... .......... .......... 21% 9.57M 0s
+   300K .......... .......... .......... .......... .......... 25% 89.3M 0s
+   350K .......... .......... .......... .......... .......... 29% 60.3M 0s
+   400K .......... .......... .......... .......... .......... 32% 48.9M 0s
+   450K .......... .......... .......... .......... .......... 36% 35.1M 0s
+   500K .......... .......... .......... .......... .......... 39% 12.2M 0s
+   550K .......... .......... .......... .......... .......... 43%  120M 0s
+   600K .......... .......... .......... .......... .......... 47% 59.8M 0s
+   650K .......... .......... .......... .......... .......... 50%  112M 0s
+   700K .......... .......... .......... .......... .......... 54% 66.2M 0s
+   750K .......... .......... .......... .......... .......... 58%  132M 0s
+   800K .......... .......... .......... .......... .......... 61%  386M 0s
+   850K .......... .......... .......... .......... .......... 65% 71.9M 0s
+   900K .......... .......... .......... .......... .......... 69%  113M 0s
+   950K .......... .......... .......... .......... .......... 72% 65.1M 0s
+  1000K .......... .......... .......... .......... .......... 76%  390M 0s
+  1050K .......... .......... .......... .......... .......... 79%  209M 0s
+  1100K .......... .......... .......... .......... .......... 83% 12.4M 0s
+  1150K .......... .......... .......... .......... .......... 87%  157M 0s
+  1200K .......... .......... .......... .......... .......... 90% 71.1M 0s
+  1250K .......... .......... .......... .......... .......... 94%  362M 0s
+  1300K .......... .......... .......... .......... .......... 98%  269M 0s
+  1350K .......... .......... ......                          100%  414M=0.05s
+
+2025-11-10 22:04:55 (29.8 MB/s) - ‘Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf’ saved [1409805/1409805]
+
+✓ Japanese Classification downloaded: 1409805 bytes
+Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf: PDF document, version 1.6, 85 pages
+✓ Verified as valid PDF
+
+Downloading Priority #5: Gastric Cancer Comprehensive Literature Review...
+--2025-11-10 22:05:14--  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11003650/pdf/cureus-0016-00000056279.pdf
+Resolving www.ncbi.nlm.nih.gov (www.ncbi.nlm.nih.gov)... 130.14.29.110, 2607:f220:41e:4290::110
+Connecting to www.ncbi.nlm.nih.gov (www.ncbi.nlm.nih.gov)|130.14.29.110|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://pmc.ncbi.nlm.nih.gov/articles/PMC11003650/pdf/cureus-0016-00000056279.pdf [following]
+--2025-11-10 22:05:15--  https://pmc.ncbi.nlm.nih.gov/articles/PMC11003650/pdf/cureus-0016-00000056279.pdf
+Resolving pmc.ncbi.nlm.nih.gov (pmc.ncbi.nlm.nih.gov)... 34.107.134.59, 2600:1901:0:c831::
+Connecting to pmc.ncbi.nlm.nih.gov (pmc.ncbi.nlm.nih.gov)|34.107.134.59|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: /articles/PMC11003650/pdf/cureus-0016-00000055902.pdf [following]
+--2025-11-10 22:05:15--  https://pmc.ncbi.nlm.nih.gov/articles/PMC11003650/pdf/cureus-0016-00000055902.pdf
+Reusing existing connection to pmc.ncbi.nlm.nih.gov:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1285 (1.3K) [text/html]
+Saving to: ‘Gastric_Cancer_Comprehensive_Review_Cureus_2024_PMC11003650.pdf’
+
+     0K .                                                     100% 41.1M=0s
+
+2025-11-10 22:05:15 (41.1 MB/s) - ‘Gastric_Cancer_Comprehensive_Review_Cureus_2024_PMC11003650.pdf’ saved [1285/1285]
+
+✓ Cureus Review downloaded: 1285 bytes
+Gastric_Cancer_Comprehensive_Review_Cureus_2024_PMC11003650.pdf: HTML document, ASCII text
+⚠ File may not be a valid PDF
+
+Downloading Priority #6: BMC Surgery - Laparoscopic Proximal Gastrectomy DTR...
+--2025-11-10 22:05:26--  https://bmcsurg.biomedcentral.com/counter/pdf/10.1186/s12893-021-01153-y.pdf
+Resolving bmcsurg.biomedcentral.com (bmcsurg.biomedcentral.com)... 151.101.20.95
+Connecting to bmcsurg.biomedcentral.com (bmcsurg.biomedcentral.com)|151.101.20.95|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1114987 (1.1M) [application/pdf]
+Saving to: ‘Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf’
+
+     0K .......... .......... .......... .......... ..........  4% 7.32M 0s
+    50K .......... .......... .......... .......... ..........  9% 17.8M 0s
+   100K .......... .......... .......... .......... .......... 13% 10.0M 0s
+   150K .......... .......... .......... .......... .......... 18% 42.0M 0s
+   200K .......... .......... .......... .......... .......... 22% 33.6M 0s
+   250K .......... .......... .......... .......... .......... 27% 15.2M 0s
+   300K .......... .......... .......... .......... .......... 32% 43.4M 0s
+   350K .......... .......... .......... .......... .......... 36% 48.3M 0s
+   400K .......... .......... .......... .......... .......... 41% 56.4M 0s
+   450K .......... .......... .......... .......... .......... 45% 66.9M 0s
+   500K .......... .......... .......... .......... .......... 50%  354M 0s
+   550K .......... .......... .......... .......... .......... 55% 87.3M 0s
+   600K .......... .......... .......... .......... .......... 59% 13.7M 0s
+   650K .......... .......... .......... .......... .......... 64%  150M 0s
+   700K .......... .......... .......... .......... .......... 68% 78.2M 0s
+   750K .......... .......... .......... .......... .......... 73%  332M 0s
+   800K .......... .......... .......... .......... .......... 78%  143M 0s
+   850K .......... .......... .......... .......... .......... 82%  146M 0s
+   900K .......... .......... .......... .......... .......... 87%  131M 0s
+   950K .......... .......... .......... .......... .......... 91%  399M 0s
+  1000K .......... .......... .......... .......... .......... 96%  129M 0s
+  1050K .......... .......... .......... ........             100%  130M=0.03s
+
+2025-11-10 22:05:28 (34.3 MB/s) - ‘Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf’ saved [1114987/1114987]
+
+✓ BMC Surgery article downloaded: 1114987 bytes
+Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf: PDF document, version 1.4, 7 pages
+✓ Verified as valid PDF
+
+Downloading Priority #7: ESMO Clinical Practice Guidelines...
+--2025-11-10 22:05:37--  https://www.annalsofoncology.org/action/showPdf?pii=S0923-7534%2822%2901851-8
+Resolving www.annalsofoncology.org (www.annalsofoncology.org)... 162.159.140.114, 172.66.0.112
+Connecting to www.annalsofoncology.org (www.annalsofoncology.org)|162.159.140.114|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-11-10 22:05:37 ERROR 403: Forbidden.
+
+✓ ESMO Guidelines downloaded: 0 bytes
+ESMO_Gastric_Cancer_Guidelines_2022_Annals_Oncology.pdf: empty
+⚠ File may not be a valid PDF (size: 0)
+
+Downloading full JGCA Guidelines article from PMC...
+--2025-11-10 22:05:48--  https://link.springer.com/content/pdf/10.1007/s10120-022-01331-8.pdf
+Resolving link.springer.com (link.springer.com)... 146.75.40.95
+Connecting to link.springer.com (link.springer.com)|146.75.40.95|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs10120-022-01331-8.pdf [following]
+--2025-11-10 22:05:48--  https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs10120-022-01331-8.pdf
+Resolving idp.springer.com (idp.springer.com)... 151.101.20.95
+Connecting to idp.springer.com (idp.springer.com)|151.101.20.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://link.springer.com/content/pdf/10.1007/s10120-022-01331-8.pdf [following]
+--2025-11-10 22:05:48--  https://link.springer.com/content/pdf/10.1007/s10120-022-01331-8.pdf
+Connecting to link.springer.com (link.springer.com)|146.75.40.95|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2217228 (2.1M) [application/pdf]
+Saving to: ‘JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf’
+
+     0K .......... .......... .......... .......... ..........  2% 6.91M 0s
+    50K .......... .......... .......... .......... ..........  4% 25.0M 0s
+   100K .......... .......... .......... .......... ..........  6% 11.3M 0s
+   150K .......... .......... .......... .......... ..........  9% 24.1M 0s
+   200K .......... .......... .......... .......... .......... 11% 28.5M 0s
+   250K .......... .......... .......... .......... .......... 13% 16.1M 0s
+   300K .......... .......... .......... .......... .......... 16% 98.9M 0s
+   350K .......... .......... .......... .......... .......... 18% 24.6M 0s
+   400K .......... .......... .......... .......... .......... 20% 75.2M 0s
+   450K .......... .......... .......... .......... .......... 23% 51.5M 0s
+   500K .......... .......... .......... .......... .......... 25%  384M 0s
+   550K .......... .......... .......... .......... .......... 27%  172M 0s
+   600K .......... .......... .......... .......... .......... 30% 15.6M 0s
+   650K .......... .......... .......... .......... .......... 32%  238M 0s
+   700K .......... .......... .......... .......... .......... 34% 30.7M 0s
+   750K .......... .......... .......... .......... .......... 36%  234M 0s
+   800K .......... .......... .......... .......... .......... 39%  171M 0s
+   850K .......... .......... .......... .......... .......... 41%  124M 0s
+   900K .......... .......... .......... .......... .......... 43%  118M 0s
+   950K .......... .......... .......... .......... .......... 46%  427M 0s
+  1000K .......... .......... .......... .......... .......... 48% 91.3M 0s
+  1050K .......... .......... .......... .......... .......... 50%  246M 0s
+  1100K .......... .......... .......... .......... .......... 53%  137M 0s
+  1150K .......... .......... .......... .......... .......... 55%  135M 0s
+  1200K .......... .......... .......... .......... .......... 57%  371M 0s
+  1250K .......... .......... .......... .......... .......... 60% 26.3M 0s
+  1300K .......... .......... .......... .......... .......... 62% 77.1M 0s
+  1350K .......... .......... .......... .......... .......... 64%  374M 0s
+  1400K .......... .......... .......... .......... .......... 66%  236M 0s
+  1450K .......... .......... .......... .......... .......... 69%  380M 0s
+  1500K .......... .......... .......... .......... .......... 71% 38.4M 0s
+  1550K .......... .......... .......... .......... .......... 73%  409M 0s
+  1600K .......... .......... .......... .......... .......... 76%  241M 0s
+  1650K .......... .......... .......... .......... .......... 78%  390M 0s
+  1700K .......... .......... .......... .......... .......... 80%  210M 0s
+  1750K .......... .......... .......... .......... .......... 83%  216M 0s
+  1800K .......... .......... .......... .......... .......... 85%  302M 0s
+  1850K .......... .......... .......... .......... .......... 87%  236M 0s
+  1900K .......... .......... .......... .......... .......... 90%  363M 0s
+  1950K .......... .......... .......... .......... .......... 92%  215M 0s
+  2000K .......... .......... .......... .......... .......... 94%  378M 0s
+  2050K .......... .......... .......... .......... .......... 96%  286M 0s
+  2100K .......... .......... .......... .......... .......... 99%  229M 0s
+  2150K .......... .....                                      100%  435M=0.04s
+
+2025-11-10 22:05:52 (54.3 MB/s) - ‘JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf’ saved [2217228/2217228]
+
+✓ JGCA Full Article downloaded: 2217228 bytes
+JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf: PDF document, version 1.4, 164 pages
+✓ Verified as valid comprehensive PDF
+
+Downloading Perioperative Management Update (Updates in Surgery 2020)...
+--2025-11-10 22:06:02--  https://link.springer.com/content/pdf/10.1007/s13304-020-00792-x.pdf
+Resolving link.springer.com (link.springer.com)... 151.101.20.95
+Connecting to link.springer.com (link.springer.com)|151.101.20.95|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs13304-020-00792-x.pdf [following]
+--2025-11-10 22:06:03--  https://idp.springer.com/authorize?response_type=cookie&client_id=springerlink&redirect_uri=https%3A%2F%2Flink.springer.com%2Fcontent%2Fpdf%2F10.1007%2Fs13304-020-00792-x.pdf
+Resolving idp.springer.com (idp.springer.com)... 151.101.20.95
+Connecting to idp.springer.com (idp.springer.com)|151.101.20.95|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://link.springer.com/content/pdf/10.1007/s13304-020-00792-x.pdf [following]
+--2025-11-10 22:06:03--  https://link.springer.com/content/pdf/10.1007/s13304-020-00792-x.pdf
+Connecting to link.springer.com (link.springer.com)|151.101.20.95|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2025-11-10 22:06:03 ERROR 404: Not Found.
+
+✓ Perioperative Management Update downloaded: 0 bytes
+Perioperative_Gastric_Cancer_Management_Updates_Surgery_2020.pdf: empty
+
+=== Current Downloads Status ===
+-rw-r--r-- 1 ubuntu ubuntu  73K Sep  7  2023 JGCA_Guidelines_2021_6th_Edition.pdf
+-rw-r--r-- 1 ubuntu ubuntu 2.2M Jan  4  2023 JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.4M Aug 27  2017 Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.1M Aug 11  2022 Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf
+-rw-r--r-- 1 ubuntu ubuntu 4.5M Nov 10 22:04 NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf
+-rw-r--r-- 1 ubuntu ubuntu    0 Nov 10 22:06 Perioperative_Gastric_Cancer_Management_Updates_Surgery_2020.pdf
+
+=== Successfully Downloaded PDFs ===
+✓ JGCA_Guidelines_2021_6th_Edition.pdf - 74261 bytes - 7 pages
+✓ JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf - 2217228 bytes - 25 pages
+✓ Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf - 1409805 bytes - 19 pages
+✓ Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf - 1114987 bytes - 7 pages
+✓ NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf - 4674651 bytes - 102 pages
+
+Total successful PDF downloads: 5
+
+✓ Created 3 full-text markdown files from scraped content
+-rw-r--r-- 1 ubuntu ubuntu 1.1K Nov 10 22:06 Double_Tract_Reconstruction_Systematic_Review_PMC8226393_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu  772 Nov 10 22:06 Gastric_Cancer_Comprehensive_Review_Cureus_2024_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu  582 Nov 10 22:06 NIH_Surgical_Management_Gastric_Cancer_NBK6969_FullText.md
+
+=== Download Summary ===
+
+PDF files downloaded:
+-rw-r--r-- 1 ubuntu ubuntu 2.2M Jan  4  2023 ./JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.1M Aug 11  2022 ./Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf
+-rw-r--r-- 1 ubuntu ubuntu 28K Nov 10 22:08 ./Double_Tract_Reconstruction_Systematic_Review_PMC8226393_FullText.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.4M Aug 27  2017 ./Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf
+-rw-r--r-- 1 ubuntu ubuntu 73K Sep  7  2023 ./JGCA_Guidelines_2021_6th_Edition.pdf
+-rw-r--r-- 1 ubuntu ubuntu 4.5M Nov 10 22:04 ./NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf
+
+Full-text markdown files created:
+-rw-r--r-- 1 ubuntu ubuntu 14K Nov 10 22:08 Double_Tract_Reconstruction_Systematic_Review_PMC8226393_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu 772 Nov 10 22:06 Gastric_Cancer_Comprehensive_Review_Cureus_2024_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu 582 Nov 10 22:06 NIH_Surgical_Management_Gastric_Cancer_NBK6969_FullText.md
+
+=== FINAL DOWNLOAD SESSION REPORT ===
+Session Date: Mon Nov 10 22:10:52 UTC 2025
+
+📊 STATISTICS
+-------------
+Total PDF files: 7
+Total Markdown files: 3
+Total storage used: 9.3M
+
+✅ SUCCESSFUL DOWNLOADS
+----------------------
+1. NCCN Patient Guidelines Stomach Cancer 2025 (4.5 MB, 102 pages)
+2. JGCA Guidelines 2021 Full Article (2.1 MB, 25 pages)
+3. Japanese Classification Gastric Carcinoma 15th Ed (1.4 MB, 19 pages)
+4. Laparoscopic Proximal Gastrectomy DTR BMC Surgery (1.1 MB, 7 pages)
+5. JGCA Guidelines 2021 Summary (73 KB, 7 pages)
+6. Double-Tract Reconstruction Review (Full-text markdown, 14 KB)
+7. Gastric Cancer Comprehensive Review Cureus (Full-text markdown)
+8. NIH Surgical Management (Full-text markdown)
+
+⚠️  DOWNLOAD FAILURES
+--------------------
+1. ESMO Guidelines (403 Forbidden - publisher block)
+2. Perioperative Management Update (404 Not Found)
+3. Some PMC PDFs (Resolved via web scraping to markdown)
+
+📁 FILES CREATED
+----------------
+-rw-r--r-- 1 ubuntu ubuntu  14K Nov 10 22:08 Double_Tract_Reconstruction_Systematic_Review_PMC8226393_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu  28K Nov 10 22:08 Double_Tract_Reconstruction_Systematic_Review_PMC8226393_FullText.pdf
+-rw-r--r-- 1 ubuntu ubuntu  772 Nov 10 22:06 Gastric_Cancer_Comprehensive_Review_Cureus_2024_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu  73K Sep  7  2023 JGCA_Guidelines_2021_6th_Edition.pdf
+-rw-r--r-- 1 ubuntu ubuntu 2.2M Jan  4  2023 JGCA_Guidelines_2021_Full_Article_PMC9813208.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.4M Aug 27  2017 Japanese_Classification_Gastric_Carcinoma_15th_Ed_PMC5215059.pdf
+-rw-r--r-- 1 ubuntu ubuntu 1.1M Aug 11  2022 Laparoscopic_Proximal_Gastrectomy_DTR_BMC_Surgery_2021.pdf
+-rw-r--r-- 1 ubuntu ubuntu 4.5M Nov 10 22:04 NCCN_Patient_Guidelines_Stomach_Cancer_2025.pdf
+-rw-r--r-- 1 ubuntu ubuntu  582 Nov 10 22:06 NIH_Surgical_Management_Gastric_Cancer_NBK6969_FullText.md
+-rw-r--r-- 1 ubuntu ubuntu  20K Nov 10 22:10 downloaded_publications_index.md
+-rw-r--r-- 1 ubuntu ubuntu  64K Nov 10 22:10 downloaded_publications_index.pdf
+
+✨ SESSION COMPLETE
+Index file created: downloaded_publications_index.md
+All files saved to: /home/ubuntu/github_repos/medical-research-repoNS/reference-materials/oncosurgery-publications
