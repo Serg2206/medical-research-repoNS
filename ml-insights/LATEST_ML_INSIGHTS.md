@@ -1,8 +1,8 @@
 # 🧠 ML Pattern Learning Report
 
-**Дата:** 2025-11-30 04:32:27
+**Дата:** 2025-12-07 04:31:27
 
-**Проанализировано коммитов:** 93
+**Проанализировано коммитов:** 100
 
 ## 🎯 ML Insights
 
@@ -10,14 +10,14 @@
 
 ## 📈 Топ-10 самых изменяемых файлов
 
-- `ai-reports/LATEST_AI_ANALYSIS.md`: 25 изменений
-- `README.md`: 9 изменений
-- `ml-models/text_vectorizer.pkl`: 8 изменений
-- `ml-reports/LATEST_TRAINING_REPORT.md`: 8 изменений
-- `docs-generated/README.md`: 6 изменений
+- `ai-reports/LATEST_AI_ANALYSIS.md`: 32 изменений
+- `ml-models/text_vectorizer.pkl`: 9 изменений
+- `ml-reports/LATEST_TRAINING_REPORT.md`: 9 изменений
+- `docs-generated/README.md`: 7 изменений
 - `ml-models/category_classifier.pkl`: 6 изменений
 - `ml-models/severity_classifier.pkl`: 6 изменений
 - `training-data/medical_training_data.csv`: 6 изменений
+- `README.md`: 6 изменений
 - `docs-generated/infer_docs.md`: 5 изменений
 - `docs-generated/main_docs.md`: 5 изменений
 
