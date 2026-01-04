@@ -1,0 +1,52 @@
+[
+  {
+    "file": "train.py",
+    "timestamp": "2026-01-04T04:08:53.903291",
+    "metrics": {
+      "complexity": "train.py\n    F 77:0 train_model - A (4)\n    F 47:0 prepare_data - A (3)\n    C 22:0 MedicalDataset - A (2)\n    M 23:4 MedicalDataset.__init__ - A (1)\n    M 28:4 MedicalDataset.__len__ - A (1)\n    M 31:4 MedicalDataset.__getitem__ - A (1)\n",
+      "maintainability": "train.py - A (69.54)\n"
+    },
+    "ai_recommendations": "Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "lines_of_code": 124
+  },
+  {
+    "file": "main.py",
+    "timestamp": "2026-01-04T04:08:56.924088",
+    "metrics": {
+      "complexity": "main.py\n    F 32:0 train_model - A (4)\n    F 72:0 predict - A (2)\n    C 14:0 MedicalNet - A (2)\n    F 92:0 main - A (1)\n    M 15:4 MedicalNet.__init__ - A (1)\n    M 22:4 MedicalNet.forward - A (1)\n",
+      "maintainability": "main.py - A (74.92)\n"
+    },
+    "ai_recommendations": "Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "lines_of_code": 111
+  },
+  {
+    "file": "infer.py",
+    "timestamp": "2026-01-04T04:08:59.223749",
+    "metrics": {
+      "complexity": "infer.py\n    F 10:0 infer_model - A (2)\n",
+      "maintainability": "infer.py - A (74.30)\n"
+    },
+    "ai_recommendations": "Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "lines_of_code": 35
+  },
+  {
+    "file": "prepare_data.py",
+    "timestamp": "2026-01-04T04:09:00.917649",
+    "metrics": {
+      "complexity": "prepare_data.py\n    F 13:0 prepare_data - A (3)\n",
+      "maintainability": "prepare_data.py - A (84.99)\n"
+    },
+    "ai_recommendations": "Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "lines_of_code": 53
+  },
+  {
+    "file": "scripts/fix_csv_headers.py",
+    "timestamp": "2026-01-04T04:09:03.172710",
+    "metrics": {
+      "complexity": "",
+      "maintainability": "scripts/fix_csv_headers.py - A (90.78)\n"
+    },
+    "ai_recommendations": "Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "lines_of_code": 29
+  }
+]
