@@ -1,6 +1,6 @@
 # 🧠 ML Pattern Learning Report
 
-**Дата:** 2026-01-11 04:45:42
+**Дата:** 2026-01-18 04:40:16
 
 **Проанализировано коммитов:** 100
 
@@ -16,10 +16,10 @@
 - `docs-generated/README.md`: 9 изменений
 - `research-insights/LATEST_RESEARCH.md`: 9 изменений
 - `ml-insights/LATEST_ML_INSIGHTS.md`: 9 изменений
-- `docs-generated/infer_docs.md`: 3 изменений
-- `docs-generated/main_docs.md`: 3 изменений
-- `docs-generated/train_docs.md`: 3 изменений
-- `ml-models/category_classifier.pkl`: 2 изменений
+- `docs-generated/infer_docs.md`: 2 изменений
+- `docs-generated/main_docs.md`: 2 изменений
+- `docs-generated/train_docs.md`: 2 изменений
+- `ai-reports/code-analysis-20260118-040334.json`: 1 изменений
 
 ---
 *Автоматически сгенерировано ML Pattern Learning System*
