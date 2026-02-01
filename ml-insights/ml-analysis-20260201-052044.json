@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-02-01T05:20:44.892110",
+  "patterns": {
+    "commit_count": 100,
+    "ml_insights": "⚠️ Ошибка ML анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+    "timestamp": "2026-02-01T05:20:44.887922"
+  },
+  "top_changed_files": [
+    [
+      "ai-reports/LATEST_AI_ANALYSIS.md",
+      64
+    ],
+    [
+      "ml-models/text_vectorizer.pkl",
+      9
+    ],
+    [
+      "ml-reports/LATEST_TRAINING_REPORT.md",
+      9
+    ],
+    [
+      "docs-generated/README.md",
+      9
+    ],
+    [
+      "research-insights/LATEST_RESEARCH.md",
+      9
+    ],
+    [
+      "ml-insights/LATEST_ML_INSIGHTS.md",
+      9
+    ],
+    [
+      "ml-models/category_classifier.pkl",
+      2
+    ],
+    [
+      "ml-models/severity_classifier.pkl",
+      2
+    ],
+    [
+      "ai-reports/code-analysis-20260201-045749.json",
+      1
+    ],
+    [
+      "ai-reports/code-analysis-20260131-042325.json",
+      1
+    ]
+  ]
+}
