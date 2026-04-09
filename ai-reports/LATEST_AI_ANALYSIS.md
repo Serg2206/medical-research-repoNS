@@ -1,22 +1,12 @@
 # 🤖 AI Code Analysis Report
 
-**Дата:** 2026-04-08 05:07:31
+**Дата:** 2026-04-09 05:05:58
 
 **Проанализировано файлов:** 5
 
 ## 📁 main.py
 
 **Строк кода:** 111
-
-### 🎯 AI Рекомендации:
-
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
-
----
-
-## 📁 infer.py
-
-**Строк кода:** 35
 
 ### 🎯 AI Рекомендации:
 
@@ -44,9 +34,19 @@
 
 ---
 
-## 📁 scripts/fix_csv_headers.py
+## 📁 infer.py
 
-**Строк кода:** 29
+**Строк кода:** 35
+
+### 🎯 AI Рекомендации:
+
+Ошибка анализа: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+
+---
+
+## 📁 scripts/train_ml_models.py
+
+**Строк кода:** 178
 
 ### 🎯 AI Рекомендации:
 
