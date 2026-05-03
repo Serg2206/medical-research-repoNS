@@ -1,6 +1,6 @@
 # 📊 ML Training Report
 
-**Дата:** 2026-04-26 02:52:41
+**Дата:** 2026-05-03 03:25:26
 
 ## 📈 Результаты
 
@@ -16,17 +16,17 @@ critical     87
 normal       73
 ```
 
-### 🏆 Лучшая модель: RandomForest
+### 🏆 Лучшая модель: LogisticRegression
 
 | Модель | Accuracy | CV Mean | CV Std |
 |--------|----------|---------|--------|
-| 🏆 RandomForest | 0.7857 | 0.6273 | 0.0549 |
-|    GradientBoosting | 0.6071 | 0.6091 | 0.0545 |
-|    LogisticRegression | 0.7679 | 0.6636 | 0.0334 |
+|    RandomForest | 0.6964 | 0.6318 | 0.0464 |
+|    GradientBoosting | 0.5714 | 0.6318 | 0.0752 |
+| 🏆 LogisticRegression | 0.7500 | 0.6818 | 0.0380 |
 
 
 ### Category Classifier
-- **Accuracy:** 0.4286
+- **Accuracy:** 0.3750
 
 ## 💾 Сохраненные модели
 1. `ml-models/severity_classifier.pkl`
