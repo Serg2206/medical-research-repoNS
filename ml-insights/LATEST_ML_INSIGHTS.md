@@ -1,6 +1,6 @@
 # 🧠 ML Pattern Learning Report
 
-**Дата:** 2026-06-14 08:14:12
+**Дата:** 2026-06-21 08:28:09
 
 **Проанализировано коммитов:** 100
 
@@ -18,8 +18,8 @@
 - `ml-insights/LATEST_ML_INSIGHTS.md`: 9 изменений
 - `ml-models/category_classifier.pkl`: 4 изменений
 - `ml-models/severity_classifier.pkl`: 4 изменений
-- `ai-reports/code-analysis-20260614-071943.json`: 1 изменений
-- `ai-reports/code-analysis-20260613-065601.json`: 1 изменений
+- `ai-reports/code-analysis-20260621-075601.json`: 1 изменений
+- `ai-reports/code-analysis-20260620-065937.json`: 1 изменений
 
 ---
 *Автоматически сгенерировано ML Pattern Learning System*
