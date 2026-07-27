@@ -1,0 +1,12 @@
+```
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Model files
+*.pth
+*.pkl
+
+# Generated manuscripts
+generated_manuscripts/
+```
