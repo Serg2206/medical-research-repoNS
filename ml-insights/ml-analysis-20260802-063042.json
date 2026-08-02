@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-02T06:30:42.886716",
+  "patterns": {
+    "commit_count": 100,
+    "ml_insights": "1. Частые типы изменений:\n    - AI Code Analysis Report (🤖)\n    - AI-generated documentation (📝)\n    - ML Training: Updated models (🤖)\n    - ML Pattern Learning Report (🧠)\n    - Research analysis report (🔬)\n\n2. Временные паттерны активности:\n    - Большинство коммитов происходит ранним утром (по UTC), что может указывать на автоматическое расписание.\n    - Также видно, что обновление моделей ML и анализ исследований происходят реже, чем другие типы коммитов.\n\n3. Области, требующие улучшения:\n    - По данным коммитов, трудно определить конкретные области, требующие улучшения. Однако, поскольку большинство коммитов связаны с отчетами об анализе кода, возможно, стоит обратить внимание на качество кода и его оптимизацию.\n\n4. Рекомендации по оптимизации процесса:\n    - Возможно, стоит увеличить частоту обновления моделей ML и анализа исследований, чтобы улучшить качество продукта.\n    - Провести анализ отчетов AI Code Analysis для выявления проблемных областей в коде и их оптимизации.\n    - Использовать результаты ML Pattern Learning Report для оптимизации процессов разработки и обучения моделей.\n    - Убедиться, что автоматические процессы (например, генерация документации) работают эффективно и не создают ненужного шума в репозитории.",
+    "timestamp": "2026-08-02T06:30:42.882301"
+  },
+  "top_changed_files": [
+    [
+      "ai-reports/LATEST_AI_ANALYSIS.md",
+      63
+    ],
+    [
+      "ml-models/text_vectorizer.pkl",
+      9
+    ],
+    [
+      "ml-reports/LATEST_TRAINING_REPORT.md",
+      9
+    ],
+    [
+      "docs-generated/README.md",
+      9
+    ],
+    [
+      "research-insights/LATEST_RESEARCH.md",
+      9
+    ],
+    [
+      "ml-insights/LATEST_ML_INSIGHTS.md",
+      9
+    ],
+    [
+      "docs-generated/main_docs.md",
+      3
+    ],
+    [
+      "docs-generated/prepare_data_docs.md",
+      3
+    ],
+    [
+      "ml-models/category_classifier.pkl",
+      2
+    ],
+    [
+      "ml-models/severity_classifier.pkl",
+      2
+    ]
+  ]
+}
