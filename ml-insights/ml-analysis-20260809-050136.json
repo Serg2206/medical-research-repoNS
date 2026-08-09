@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-09T05:01:36.727854",
+  "patterns": {
+    "commit_count": 100,
+    "ml_insights": "⚠️ Ошибка ML анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+    "timestamp": "2026-08-09T05:01:36.723016"
+  },
+  "top_changed_files": [
+    [
+      "ai-reports/LATEST_AI_ANALYSIS.md",
+      63
+    ],
+    [
+      "ml-models/text_vectorizer.pkl",
+      9
+    ],
+    [
+      "ml-reports/LATEST_TRAINING_REPORT.md",
+      9
+    ],
+    [
+      "docs-generated/README.md",
+      9
+    ],
+    [
+      "research-insights/LATEST_RESEARCH.md",
+      9
+    ],
+    [
+      "ml-insights/LATEST_ML_INSIGHTS.md",
+      9
+    ],
+    [
+      "docs-generated/main_docs.md",
+      3
+    ],
+    [
+      "docs-generated/prepare_data_docs.md",
+      3
+    ],
+    [
+      "ml-models/category_classifier.pkl",
+      2
+    ],
+    [
+      "ml-models/severity_classifier.pkl",
+      2
+    ]
+  ]
+}
