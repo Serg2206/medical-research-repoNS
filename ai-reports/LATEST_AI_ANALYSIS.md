@@ -1,32 +1,12 @@
 # 🤖 AI Code Analysis Report
 
-**Дата:** 2026-09-03 07:41:31
+**Дата:** 2026-09-04 07:38:40
 
 **Проанализировано файлов:** 5
-
-## 📁 main.py
-
-**Строк кода:** 111
-
-### 🎯 AI Рекомендации:
-
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
-
----
 
 ## 📁 prepare_data.py
 
 **Строк кода:** 53
-
-### 🎯 AI Рекомендации:
-
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
-
----
-
-## 📁 infer.py
-
-**Строк кода:** 35
 
 ### 🎯 AI Рекомендации:
 
@@ -44,9 +24,29 @@
 
 ---
 
-## 📁 scripts/train_ml_models.py
+## 📁 infer.py
 
-**Строк кода:** 178
+**Строк кода:** 35
+
+### 🎯 AI Рекомендации:
+
+Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+
+---
+
+## 📁 main.py
+
+**Строк кода:** 111
+
+### 🎯 AI Рекомендации:
+
+Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+
+---
+
+## 📁 scripts/fix_csv_headers.py
+
+**Строк кода:** 29
 
 ### 🎯 AI Рекомендации:
 
