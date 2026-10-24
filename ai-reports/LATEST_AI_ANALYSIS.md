@@ -1,6 +1,6 @@
 # 🤖 AI Code Analysis Report
 
-**Дата:** 2026-10-23 03:09:40
+**Дата:** 2026-10-24 03:08:43
 
 **Проанализировано файлов:** 5
 
@@ -10,7 +10,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ---
 
@@ -20,7 +20,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ---
 
@@ -40,7 +40,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ---
 
@@ -50,7 +50,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ---
 
