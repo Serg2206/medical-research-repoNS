@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-10-25T04:10:52.535469",
+  "patterns": {
+    "commit_count": 100,
+    "ml_insights": "⚠️ Ошибка ML анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}",
+    "timestamp": "2026-10-25T04:10:52.530147"
+  },
+  "top_changed_files": [
+    [
+      "ai-reports/LATEST_AI_ANALYSIS.md",
+      64
+    ],
+    [
+      "ml-models/text_vectorizer.pkl",
+      9
+    ],
+    [
+      "ml-reports/LATEST_TRAINING_REPORT.md",
+      9
+    ],
+    [
+      "docs-generated/README.md",
+      9
+    ],
+    [
+      "research-insights/LATEST_RESEARCH.md",
+      9
+    ],
+    [
+      "ml-insights/LATEST_ML_INSIGHTS.md",
+      9
+    ],
+    [
+      "ml-models/category_classifier.pkl",
+      4
+    ],
+    [
+      "ml-models/severity_classifier.pkl",
+      4
+    ],
+    [
+      "ai-reports/code-analysis-20261025-030936.json",
+      1
+    ],
+    [
+      "ai-reports/code-analysis-20261024-030843.json",
+      1
+    ]
+  ]
+}

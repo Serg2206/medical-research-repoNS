@@ -1,12 +1,12 @@
 # 🧠 ML Pattern Learning Report
 
-**Дата:** 2026-10-18 04:11:09
+**Дата:** 2026-10-25 04:10:52
 
 **Проанализировано коммитов:** 100
 
 ## 🎯 ML Insights
 
-⚠️ Ошибка ML анализа: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}
+⚠️ Ошибка ML анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
 
 ## 📈 Топ-10 самых изменяемых файлов
 
@@ -16,10 +16,10 @@
 - `docs-generated/README.md`: 9 изменений
 - `research-insights/LATEST_RESEARCH.md`: 9 изменений
 - `ml-insights/LATEST_ML_INSIGHTS.md`: 9 изменений
-- `ml-models/category_classifier.pkl`: 3 изменений
-- `ml-models/severity_classifier.pkl`: 3 изменений
-- `ai-reports/code-analysis-20261018-030916.json`: 1 изменений
-- `ai-reports/code-analysis-20261017-030831.json`: 1 изменений
+- `ml-models/category_classifier.pkl`: 4 изменений
+- `ml-models/severity_classifier.pkl`: 4 изменений
+- `ai-reports/code-analysis-20261025-030936.json`: 1 изменений
+- `ai-reports/code-analysis-20261024-030843.json`: 1 изменений
 
 ---
 *Автоматически сгенерировано ML Pattern Learning System*
