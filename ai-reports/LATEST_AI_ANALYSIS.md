@@ -1,6 +1,6 @@
 # 🤖 AI Code Analysis Report
 
-**Дата:** 2026-10-26 03:12:13
+**Дата:** 2026-10-27 03:10:19
 
 **Проанализировано файлов:** 5
 
@@ -10,7 +10,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
 
 ---
 
@@ -20,7 +20,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
 
 ---
 
@@ -40,7 +40,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
 
 ---
 
@@ -50,7 +50,7 @@
 
 ### 🎯 AI Рекомендации:
 
-Ошибка анализа: Error code: 404 - {'error': {'message': 'The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
 
 ---
 
