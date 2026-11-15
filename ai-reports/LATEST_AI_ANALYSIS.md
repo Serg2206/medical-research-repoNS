@@ -1,8 +1,18 @@
 # 🤖 AI Code Analysis Report
 
-**Дата:** 2026-11-14 03:05:24
+**Дата:** 2026-11-15 03:06:25
 
 **Проанализировано файлов:** 5
+
+## 📁 prepare_data.py
+
+**Строк кода:** 53
+
+### 🎯 AI Рекомендации:
+
+Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
+
+---
 
 ## 📁 main.py
 
@@ -24,16 +34,6 @@
 
 ---
 
-## 📁 prepare_data.py
-
-**Строк кода:** 53
-
-### 🎯 AI Рекомендации:
-
-Ошибка анализа: Error code: 404 - The model `gpt-4` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations
-
----
-
 ## 📁 train.py
 
 **Строк кода:** 124
@@ -44,9 +44,9 @@
 
 ---
 
-## 📁 scripts/train_ml_models.py
+## 📁 scripts/fix_csv_headers.py
 
-**Строк кода:** 178
+**Строк кода:** 29
 
 ### 🎯 AI Рекомендации:
 
